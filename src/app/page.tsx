@@ -144,7 +144,6 @@ export default function LandingPage() {
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                 <item.icon className="w-6 h-6 text-primary" />
               </div>
-              <item.icon className="w-6 h-6 text-primary" />
               <h3 className="text-xl font-bold font-headline">{item.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
             </div>
@@ -298,22 +297,39 @@ export default function LandingPage() {
         </div>
       </SectionContainer>
 
-      {/* SEÇÃO 8 – CTA PRINCIPAL */}
+      {/* SEÇÃO 8 – CTA PRINCIPAL (PREÇO) */}
       <SectionContainer className="py-32">
-        <div className="relative rounded-[3rem] overflow-hidden p-12 md:p-24 text-center bg-card border border-primary/30 shadow-[0_0_100px_rgba(160,145,234,0.1)]">
+        <div className="relative rounded-[3rem] overflow-hidden p-8 md:p-16 lg:p-24 text-center bg-card border border-primary/30 shadow-[0_0_100px_rgba(160,145,234,0.1)] max-w-5xl mx-auto">
           <div className="glow-purple -top-40 -left-40 opacity-40 animate-pulse-glow" />
           <div className="glow-purple -bottom-40 -right-40 opacity-40 animate-pulse-glow" />
           
-          <h2 className="text-4xl md:text-6xl font-headline font-bold mb-6">
-            Comece sua jornada do <br /> MVP ao SaaS hoje
+          <h2 className="text-4xl md:text-6xl font-headline font-bold mb-6 tracking-tight">
+            Comece sua jornada hoje
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12">
-            Aprenda a transformar ideias em produtos digital reais com aulas objetivas, práticas e diretas ao ponto.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-16 leading-relaxed">
+            Transforme suas ideias em produtos digitais reais com o método Do MVP ao SaaS.
           </p>
-          <Button size="lg" className="h-16 px-16 rounded-full bg-primary text-background hover:bg-primary/90 text-xl font-bold group">
-            Quero acessar o mini curso
-            <ArrowRight className="w-6 h-6 ml-2 group-hover:translate-x-2 transition-transform" />
+
+          <div className="space-y-4 mb-16">
+            <p className="text-muted-foreground line-through text-lg font-medium opacity-60">De R$ 497,00</p>
+            <div className="flex flex-col items-center justify-center">
+              <div className="text-5xl md:text-7xl font-bold tracking-tighter">
+                12x R$ <span className="text-primary">19,70</span>
+              </div>
+              <p className="text-sm md:text-base text-muted-foreground mt-2">ou R$ 197,00 à vista</p>
+            </div>
+          </div>
+
+          <Button size="lg" className="h-20 px-12 md:px-20 rounded-2xl bg-white text-black hover:bg-white/90 text-xl font-bold uppercase tracking-wide group mb-12">
+            Quero acessar agora
           </Button>
+
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12 text-[10px] md:text-xs font-bold text-muted-foreground tracking-[0.2em] uppercase opacity-60">
+            <span>Visa</span>
+            <span>Mastercard</span>
+            <span>Pix</span>
+            <span>7 Dias de Garantia</span>
+          </div>
         </div>
       </SectionContainer>
 
