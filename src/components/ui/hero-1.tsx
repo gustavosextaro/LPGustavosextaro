@@ -1,10 +1,8 @@
-
 'use client';
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Rocket, ArrowRight, Zap, Clock, Target } from "lucide-react";
+import { Rocket, ArrowRight, PhoneCall } from "lucide-react";
 import { LogoCloud } from "@/components/ui/logo-cloud-3";
-import { Badge } from "@/components/ui/badge";
 
 export function HeroSection() {
 	return (
@@ -43,8 +41,8 @@ export function HeroSection() {
 						"fade-in slide-in-from-bottom-10 animate-in fill-mode-backwards transition-all delay-500 duration-500 ease-out"
 					)}
 				>
-					<Zap className="size-3 text-primary" />
-					<span className="text-xs font-medium text-white/80">O caminho mais rápido para o seu próprio produto</span>
+					<Rocket className="size-3 text-primary" />
+					<span className="text-xs font-medium text-white/80">O caminho mais rápido para o seu SaaS</span>
 					<span className="block h-3 border-l border-white/10" />
 					<ArrowRight className="size-3 duration-150 ease-out group-hover:translate-x-1" />
 				</div>
@@ -58,17 +56,8 @@ export function HeroSection() {
 				</h1>
 
 				<p className="fade-in slide-in-from-bottom-10 mx-auto max-w-3xl animate-in fill-mode-backwards text-center text-base text-muted-foreground tracking-wide delay-200 duration-500 ease-out sm:text-lg md:text-xl leading-relaxed">
-					Aprenda a criar, estruturar e monetizar um Micro SaaS do zero usando Vibe Coding, IA e ferramentas modernas, mesmo sem ser programador profissional.
+					Aprenda a criar, estruturar e monetizar um Micro SaaS do zero usando Vibe Coding e IA, mesmo sem ser programador profissional.
 				</p>
-
-        <div className="fade-in slide-in-from-bottom-10 animate-in flex flex-wrap justify-center gap-4 py-4 delay-250 duration-500">
-          <Badge variant="secondary" className="px-4 py-2 text-sm bg-secondary/50 border-white/5 rounded-full flex gap-2">
-            <Clock className="w-4 h-4" /> Aulas rápidas (15 min)
-          </Badge>
-          <Badge variant="secondary" className="px-4 py-2 text-sm bg-secondary/50 border-white/5 rounded-full flex gap-2">
-            <Target className="w-4 h-4" /> Foco em produto real
-          </Badge>
-        </div>
 
 				<div className="fade-in slide-in-from-bottom-10 flex animate-in flex-col sm:flex-row items-center justify-center gap-4 fill-mode-backwards pt-4 delay-300 duration-500 ease-out">
 					<Button size="lg" className="rounded-full px-10 h-14 text-lg bg-primary text-background hover:bg-primary/90 font-bold group w-full sm:w-auto">
@@ -76,7 +65,8 @@ export function HeroSection() {
 						<ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
 					</Button>
 					<Button size="lg" variant="ghost" className="rounded-full px-10 h-14 text-lg border border-white/10 hover:bg-white/5 w-full sm:w-auto">
-						Ver conteúdo do curso
+						<PhoneCall className="size-4 mr-2" />
+						Falar com consultor
 					</Button>
 				</div>
 			</div>

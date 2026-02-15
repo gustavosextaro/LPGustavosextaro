@@ -1,4 +1,3 @@
-
 'use client';
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { cn } from "@/lib/utils";
@@ -23,7 +22,7 @@ export function LogoCloud({ className, logos, ...props }: LogoCloudProps) {
         className
       )}
     >
-      <InfiniteSlider gap={42} reverse duration={25}>
+      <InfiniteSlider gap={42} reverse duration={25} durationOnHover={40}>
         {logos.map((logo) => (
           <img
             alt={logo.alt}
