@@ -1,3 +1,16 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "saas-dashboard",
+      "description": "Modern SaaS Dashboard UI with dark mode",
+      "imageUrl": "https://images.unsplash.com/photo-1632710366440-811ad657aced?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzYWFzJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc3MTE2OTY0NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "saas dashboard"
+    },
+    {
+      "id": "code-editor",
+      "description": "Clean code editor with purple theme",
+      "imageUrl": "https://images.unsplash.com/photo-1585229259461-1bc7f43f4125?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb2RpbmclMjBpbnRlcmZhY2V8ZW58MHx8fHwxNzcxMTk4ODEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coding interface"
+    }
+  ]
 }
