@@ -1,3 +1,6 @@
+
+'use client';
+
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -23,69 +26,17 @@ import {
   AccordionTrigger 
 } from "@/components/ui/accordion";
 import Image from "next/image";
+import { Header } from "@/components/ui/header-1";
+import { HeroSection, LogosSection } from "@/components/ui/hero-1";
 
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-background selection:bg-primary/30 selection:text-white">
-      {/* Navbar - Simple and Premium */}
-      <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="font-headline font-bold text-xl tracking-tight flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <Rocket className="w-5 h-5 text-background" />
-            </div>
-            <span>Do MVP ao SaaS</span>
-          </div>
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
-            <a href="#context" className="hover:text-primary transition-colors">Para quem?</a>
-            <a href="#modules" className="hover:text-primary transition-colors">Conteúdo</a>
-            <a href="#faq" className="hover:text-primary transition-colors">FAQ</a>
-          </div>
-          <Button variant="outline" className="border-primary/20 hover:bg-primary/10 text-primary md:flex hidden">
-            Entrar
-          </Button>
-          <Button className="md:hidden block rounded-full px-6">
-            Começar
-          </Button>
-        </div>
-      </nav>
+      <Header />
 
-      {/* SEÇÃO 1 – HERO */}
-      <SectionContainer className="pt-32 pb-20 text-center">
-        <div className="glow-purple top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-30" />
-        
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-8 animate-in fade-in slide-in-from-top-4 duration-500">
-          <Zap className="w-4 h-4 text-primary" />
-          <span className="text-xs md:text-sm font-medium text-white/80">O caminho mais rápido para o seu próprio produto</span>
-        </div>
-
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-headline font-bold mb-6 tracking-tighter animate-in fade-in slide-in-from-bottom-4 duration-700">
-          Do MVP ao <span className="text-primary italic">SaaS</span>
-        </h1>
-        
-        <p className="text-lg md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed font-body">
-          Aprenda a criar, estruturar e monetizar um Micro SaaS do zero usando Vibe Coding, IA e ferramentas modernas, mesmo sem ser programador profissional.
-        </p>
-
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <Badge variant="secondary" className="px-4 py-2 text-sm bg-secondary/50 border-white/5 rounded-full flex gap-2">
-            <Clock className="w-4 h-4" /> Aulas rápidas (15 min)
-          </Badge>
-          <Badge variant="secondary" className="px-4 py-2 text-sm bg-secondary/50 border-white/5 rounded-full flex gap-2">
-            <Target className="w-4 h-4" /> Foco em produto real
-          </Badge>
-        </div>
-
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button size="lg" className="rounded-full px-10 h-14 text-lg bg-primary text-background hover:bg-primary/90 font-bold group">
-            Quero começar agora
-            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-          </Button>
-          <Button size="lg" variant="ghost" className="rounded-full px-10 h-14 text-lg border border-white/10 hover:bg-white/5" asChild>
-            <a href="#modules">Ver conteúdo do curso</a>
-          </Button>
-        </div>
-      </SectionContainer>
+      {/* Hero Section Integrada */}
+      <HeroSection />
+      <LogosSection />
 
       {/* SEÇÃO 2 – CONTEXTUALIZAÇÃO */}
       <SectionContainer id="context" className="bg-secondary/20 border-y border-white/5">
