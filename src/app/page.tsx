@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -17,7 +16,6 @@ import {
   Sparkles
 } from "lucide-react";
 import { SectionContainer } from "@/components/SectionContainer";
-import { AssistantDemo } from "@/components/AssistantDemo";
 import { 
   Accordion, 
   AccordionContent, 
@@ -146,6 +144,7 @@ export default function LandingPage() {
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                 <item.icon className="w-6 h-6 text-primary" />
               </div>
+              <item.icon className="w-6 h-6 text-primary" />
               <h3 className="text-xl font-bold font-headline">{item.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
             </div>
@@ -266,11 +265,6 @@ export default function LandingPage() {
         <p className="text-center mt-12 text-sm text-muted-foreground">
           O curso também inclui exercícios práticos opcionais para fixação do conteúdo.
         </p>
-      </SectionContainer>
-
-      {/* SEÇÃO - GEN AI ASSISTANT DEMO (Bonus Content) */}
-      <SectionContainer className="py-12">
-        <AssistantDemo />
       </SectionContainer>
 
       {/* SEÇÃO 6 – DIFERENCIAL */}
