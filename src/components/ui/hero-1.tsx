@@ -1,3 +1,4 @@
+
 'use client';
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -25,7 +26,7 @@ export function HeroSection() {
 			</div>
 
 			{/* main content */}
-			<div className="relative flex flex-col items-center justify-center gap-5 pt-24 pb-12 px-6">
+			<div className="relative flex flex-col items-center justify-center gap-5 pt-32 pb-8 px-6">
 				{/* X Content Faded Borders */}
 				<div
 					aria-hidden="true"
@@ -44,14 +45,14 @@ export function HeroSection() {
 					)}
 				>
 					<Rocket className="size-3 text-primary" />
-					<span className="text-xs font-medium text-white/80 tracking-tight">O caminho mais rápido para o seu SaaS</span>
+					<span className="text-xs font-medium text-white/80 tracking-tight text-shadow-premium">O caminho mais rápido para o seu SaaS</span>
 					<span className="block h-3 border-l border-white/10" />
-					<ArrowRight className="size-3 duration-150 ease-out group-hover:translate-x-1" />
+					<ArrowRight className="size-3 text-white/60 duration-150 ease-out group-hover:translate-x-1" />
 				</div>
 
 				<h1
 					className={cn(
-						"fade-in slide-in-from-bottom-10 animate-in text-balance fill-mode-backwards text-center text-5xl font-headline font-bold tracking-tight delay-100 duration-500 ease-out md:text-7xl lg:text-8xl text-shadow-premium"
+						"fade-in slide-in-from-bottom-10 animate-in text-balance fill-mode-backwards text-center text-5xl font-headline font-bold tracking-tight delay-100 duration-500 ease-out md:text-7xl lg:text-8xl text-shadow-premium text-white"
 					)}
 				>
 					Do MVP ao <span className="text-primary italic">SaaS</span>
@@ -61,12 +62,12 @@ export function HeroSection() {
 					Aprenda a criar, estruturar e monetizar um Micro SaaS do zero usando Vibe Coding e IA, mesmo sem ser programador profissional.
 				</p>
 
-				<div className="fade-in slide-in-from-bottom-10 flex animate-in flex-col sm:flex-row items-center justify-center gap-4 fill-mode-backwards pt-2 delay-300 duration-500 ease-out">
-					<Button size="lg" className="rounded-full px-10 h-14 text-lg bg-primary text-background hover:bg-primary/90 font-bold group w-full sm:w-auto">
+				<div className="fade-in slide-in-from-bottom-10 flex animate-in flex-col sm:flex-row items-center justify-center gap-4 fill-mode-backwards pt-4 delay-300 duration-500 ease-out">
+					<Button size="lg" className="rounded-full px-10 h-14 text-lg bg-white text-[#000401] hover:bg-white/90 font-bold group w-full sm:w-auto transition-transform hover:scale-105 active:scale-95">
 						Quero começar agora
 						<ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
 					</Button>
-					<Button size="lg" variant="outline" className="rounded-full px-10 h-14 text-lg border-white/10 hover:bg-white/10 hover:text-white transition-all w-full sm:w-auto">
+					<Button size="lg" variant="outline" className="rounded-full px-10 h-14 text-lg border-white/20 text-white bg-white/5 hover:bg-white/10 hover:border-white/40 transition-all w-full sm:w-auto">
 						<PhoneCall className="size-4 mr-2" />
 						Converse comigo
 					</Button>
@@ -78,9 +79,9 @@ export function HeroSection() {
 
 export function LogosSection() {
 	return (
-		<section className="relative space-y-4 py-4">
-			<h2 className="text-center font-headline font-medium text-lg text-white tracking-tight md:text-xl">
-				Domine a stack <span className="text-primary">moderna</span>
+		<section className="relative space-y-4 pt-4 pb-12">
+			<h2 className="text-center font-headline font-medium text-lg text-white/60 tracking-tight md:text-xl">
+				Domine a stack <span className="text-white">moderna</span>
 			</h2>
 			<div className="relative z-10 mx-auto max-w-4xl px-6">
 				<LogoCloud logos={logos} />

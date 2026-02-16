@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useEffect, useState } from "react"
@@ -34,11 +35,11 @@ export function NavBar({ items, className }: NavBarProps) {
   return (
     <div
       className={cn(
-        "fixed bottom-0 sm:top-0 left-1/2 -translate-x-1/2 z-50 mb-6 sm:pt-6 w-fit",
+        "fixed bottom-0 sm:top-0 left-0 right-0 z-50 flex justify-center pointer-events-none mb-6 sm:pt-6",
         className,
       )}
     >
-      <div className="flex items-center gap-1 sm:gap-3 bg-background/5 border border-white/10 backdrop-blur-lg py-1 px-1 rounded-full shadow-2xl">
+      <div className="flex items-center gap-1 sm:gap-3 bg-[#000401]/80 border border-white/10 backdrop-blur-lg py-1 px-1 rounded-full shadow-2xl pointer-events-auto">
         {items.map((item) => {
           const Icon = item.icon
           const isActive = activeTab === item.name
@@ -50,8 +51,8 @@ export function NavBar({ items, className }: NavBarProps) {
               onClick={() => setActiveTab(item.name)}
               className={cn(
                 "relative cursor-pointer text-sm font-semibold px-4 sm:px-6 py-2 rounded-full transition-colors",
-                "text-foreground/60 hover:text-primary",
-                isActive && "text-primary",
+                "text-white/60 hover:text-white",
+                isActive && "text-white",
               )}
             >
               <span className="hidden md:inline">{item.name}</span>
@@ -61,7 +62,7 @@ export function NavBar({ items, className }: NavBarProps) {
               {isActive && (
                 <motion.div
                   layoutId="lamp"
-                  className="absolute inset-0 w-full bg-primary/10 rounded-full -z-10"
+                  className="absolute inset-0 w-full bg-white/10 rounded-full -z-10"
                   initial={false}
                   transition={{
                     type: "spring",
