@@ -25,7 +25,7 @@ export function HeroSection() {
 			</div>
 
 			{/* main content */}
-			<div className="relative flex flex-col items-center justify-center gap-5 pt-32 pb-20 px-6">
+			<div className="relative flex flex-col items-center justify-center gap-5 pt-32 pb-12 px-6">
 				{/* X Content Faded Borders */}
 				<div
 					aria-hidden="true"
@@ -44,7 +44,7 @@ export function HeroSection() {
 					)}
 				>
 					<Rocket className="size-3 text-primary" />
-					<span className="text-xs font-medium text-white/80">O caminho mais rápido para o seu SaaS</span>
+					<span className="text-xs font-medium text-white/80 tracking-tight">O caminho mais rápido para o seu SaaS</span>
 					<span className="block h-3 border-l border-white/10" />
 					<ArrowRight className="size-3 duration-150 ease-out group-hover:translate-x-1" />
 				</div>
@@ -78,7 +78,7 @@ export function HeroSection() {
 
 export function LogosSection() {
 	return (
-		<section className="relative space-y-8 border-t border-white/5 pt-12 pb-20">
+		<section className="relative space-y-8 pt-4 pb-20">
 			<h2 className="text-center font-headline font-medium text-lg text-muted-foreground tracking-tight md:text-xl">
 				Domine a stack <span className="text-white">moderna</span>
 			</h2>
