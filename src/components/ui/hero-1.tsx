@@ -78,7 +78,7 @@ export function HeroSection() {
 
 export function LogosSection() {
 	return (
-		<section className="relative space-y-6 py-8">
+		<section className="relative space-y-4 py-4">
 			<h2 className="text-center font-headline font-medium text-lg text-white tracking-tight md:text-xl">
 				Domine a stack <span className="text-primary">moderna</span>
 			</h2>
@@ -90,10 +90,6 @@ export function LogosSection() {
 }
 
 const logos = [
-	{
-		src: "https://storage.efferd.com/logo/nvidia-wordmark.svg",
-		alt: "Nvidia Logo",
-	},
 	{
 		src: "https://storage.efferd.com/logo/supabase-wordmark.svg",
 		alt: "Supabase Logo",
@@ -117,9 +113,5 @@ const logos = [
 	{
 		src: "https://storage.efferd.com/logo/claude-wordmark.svg",
 		alt: "Claude AI Logo",
-	},
-	{
-		src: "https://storage.efferd.com/logo/clerk-wordmark.svg",
-		alt: "Clerk Logo",
 	},
 ];
