@@ -13,7 +13,6 @@ import {
   PlayCircle,
   Sparkles,
   HelpCircle,
-  Home
 } from "lucide-react";
 import { SectionContainer } from "@/components/SectionContainer";
 import { 
@@ -23,20 +22,12 @@ import {
   AccordionTrigger 
 } from "@/components/ui/accordion";
 import { HeroSection, LogosSection } from "@/components/ui/hero-1";
-import { NavBar } from "@/components/ui/tubelight-navbar";
 import { Features } from "@/components/ui/features-4";
 
 export default function LandingPage() {
-  const navItems = [
-    { name: 'Início', url: '#', icon: Home },
-    { name: 'Para quem?', url: '#context', icon: Target },
-    { name: 'Conteúdo', url: '#modules', icon: Zap },
-    { name: 'FAQ', url: '#faq', icon: HelpCircle }
-  ];
-
   return (
     <div className="min-h-screen bg-[#000401] selection:bg-primary/30 selection:text-white">
-      <NavBar items={navItems} />
+      {/* O Header foi removido e aguarda o novo componente */}
 
       {/* Hero Section */}
       <HeroSection />
@@ -44,7 +35,7 @@ export default function LandingPage() {
       {/* Logos Section */}
       <LogosSection />
 
-      {/* SEÇÃO 2 – PÚBLICO ALVO (FEATURES-4) */}
+      {/* SEÇÃO 2 – PÚBLICO ALVO */}
       <Features />
 
       {/* SEÇÃO 3 – O QUE É O CURSO */}
@@ -207,7 +198,7 @@ export default function LandingPage() {
             </div>
           </div>
 
-          <Button size="lg" className="h-20 px-12 md:px-20 rounded-2xl bg-white text-[#000401] hover:bg-white/90 text-xl font-bold uppercase tracking-wide group mb-12">
+          <Button size="lg" className="h-20 px-12 md:px-20 rounded-2xl bg-white text-[#000401] hover:bg-white/90 text-xl font-bold uppercase tracking-wide group mb-12 transition-transform hover:scale-105">
             Quero acessar agora
           </Button>
 
