@@ -22,9 +22,9 @@ import {
   AccordionItem, 
   AccordionTrigger 
 } from "@/components/ui/accordion";
-import Image from "next/image";
 import { HeroSection, LogosSection } from "@/components/ui/hero-1";
 import { NavBar } from "@/components/ui/tubelight-navbar";
+import { Features } from "@/components/ui/features-4";
 
 export default function LandingPage() {
   const navItems = [
@@ -41,52 +41,17 @@ export default function LandingPage() {
       {/* Hero Section */}
       <HeroSection />
       
-      {/* Logos Section - Removida a margem negativa que causava sobreposição */}
+      {/* Logos Section */}
       <LogosSection />
 
-      {/* SEÇÃO 2 – CONTEXTUALIZAÇÃO */}
-      <SectionContainer id="context" className="bg-white/2 border-y border-white/5">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-headline font-bold mb-6">
-              Para quem é o mini curso <br className="hidden md:block" /> Do MVP ao SaaS?
-            </h2>
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              Este mini curso foi criado para iniciantes, criadores digitais, gestores de tráfego, empreendedores e pessoas que querem transformar ideias em produtos digitais reais sem depender de programação avançada.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                "Iniciantes em SaaS",
-                "Criadores de Micro SaaS",
-                "Pessoas interessadas em Vibe Coding",
-                "Empreendedores digitais",
-                "Quem quer validar ideias"
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/5">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
-                  <span className="text-sm font-medium">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-            <Image 
-              src="https://picsum.photos/seed/context1/800/600" 
-              alt="Course Context" 
-              fill 
-              className="object-cover"
-              data-ai-hint="saas concept"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#000401]/80 to-transparent" />
-          </div>
-        </div>
-      </SectionContainer>
+      {/* SEÇÃO 2 – PÚBLICO ALVO (FEATURES-4) */}
+      <Features />
 
       {/* SEÇÃO 3 – O QUE É O CURSO */}
       <SectionContainer className="text-center">
         <div className="max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold mb-6">O que você vai aprender</h2>
-          <p className="text-muted-foreground text-lg">
+          <h2 className="text-3xl md:text-4xl font-headline font-bold mb-6 text-white">O que você vai aprender</h2>
+          <p className="text-muted-foreground text-lg leading-relaxed">
             Uma sequência de aulas gravadas, curtas e objetivas (média de 15 minutos), focadas em ensinar desde a mentalidade de produto até a criação, estruturação e deploy.
           </p>
         </div>
@@ -97,11 +62,11 @@ export default function LandingPage() {
             { icon: Target, title: "Sem enrolação", desc: "Aulas focadas na execução e no resultado final esperado." },
             { icon: Monitor, title: "Foco em execução prática", desc: "Você verá a construção real acontecendo na sua frente." }
           ].map((item, i) => (
-            <div key={i} className="p-8 rounded-2xl card-gradient text-left space-y-4 hover:border-primary/20 transition-all duration-300">
+            <div key={i} className="p-8 rounded-2xl bg-white/[0.03] border border-white/5 text-left space-y-4 hover:border-primary/20 transition-all duration-300">
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                 <item.icon className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-xl font-bold font-headline">{item.title}</h3>
+              <h3 className="text-xl font-bold font-headline text-white">{item.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
             </div>
           ))}
@@ -111,7 +76,7 @@ export default function LandingPage() {
       {/* SEÇÃO 4 – O QUE VOCÊ VAI CONSTRUIR */}
       <SectionContainer className="bg-primary/5 rounded-[3rem] my-12">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-headline font-bold mb-4">O que você terá ao final</h2>
+          <h2 className="text-3xl md:text-5xl font-headline font-bold mb-4 text-white">O que você terá ao final</h2>
           <p className="text-muted-foreground">O aluno não apenas aprende teoria, mas sai com um produto digital real em funcionamento.</p>
         </div>
 
@@ -127,7 +92,7 @@ export default function LandingPage() {
               <div className="mb-4 text-primary group-hover:scale-110 transition-transform">
                 <item.icon className="w-8 h-8" />
               </div>
-              <span className="font-bold text-sm tracking-tight">{item.title}</span>
+              <span className="font-bold text-sm tracking-tight text-white">{item.title}</span>
             </div>
           ))}
         </div>
@@ -137,12 +102,12 @@ export default function LandingPage() {
       <SectionContainer id="modules">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-5xl font-headline font-bold mb-4">Conteúdo completo</h2>
+            <h2 className="text-3xl md:text-5xl font-headline font-bold mb-4 text-white">Conteúdo completo</h2>
             <p className="text-muted-foreground text-lg">Uma jornada estruturada do zero absoluto até o deploy final.</p>
           </div>
           <div className="bg-white/5 border border-white/10 px-6 py-3 rounded-full flex items-center gap-3">
             <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-sm font-medium">7 Aulas • 100% Gravadas</span>
+            <span className="text-sm font-medium text-white/80">7 Aulas • 100% Gravadas</span>
           </div>
         </div>
 
@@ -185,9 +150,9 @@ export default function LandingPage() {
               objective: "Independência de ferramenta."
             }
           ].map((aula) => (
-            <div key={aula.id} className="group card-gradient rounded-3xl p-8 relative overflow-hidden transition-all hover:scale-[1.02] border-white/5 hover:border-primary/30">
+            <div key={aula.id} className="group bg-white/[0.03] rounded-3xl p-8 relative overflow-hidden transition-all hover:scale-[1.02] border border-white/5 hover:border-primary/30">
               <div className="text-xs font-bold text-primary mb-4 uppercase tracking-widest">Aula 0{aula.id}</div>
-              <h3 className="text-xl font-bold font-headline mb-6">{aula.title}</h3>
+              <h3 className="text-xl font-bold font-headline mb-6 text-white">{aula.title}</h3>
               <ul className="space-y-3 mb-8">
                 {aula.content.map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
@@ -205,9 +170,9 @@ export default function LandingPage() {
             </div>
           ))}
           {/* Aula 7 - Destaque */}
-          <div className="lg:col-span-1 group card-gradient rounded-3xl p-8 border-primary/20 bg-primary/5">
+          <div className="lg:col-span-1 group bg-primary/5 rounded-3xl p-8 border border-primary/20">
             <div className="text-xs font-bold text-primary mb-4 uppercase tracking-widest">Aula 07</div>
-            <h3 className="text-xl font-bold font-headline mb-4">Polimento e Aparência Real</h3>
+            <h3 className="text-xl font-bold font-headline mb-4 text-white">Polimento e Aparência Real</h3>
             <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
               Dê o toque profissional que diferencia amadores de produtos reais. UX, fluxo de usuário e organização final do código.
             </p>
@@ -217,19 +182,15 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-        
-        <p className="text-center mt-12 text-sm text-muted-foreground">
-          O curso também inclui exercícios práticos opcionais para fixação do conteúdo.
-        </p>
       </SectionContainer>
 
-      {/* SEÇÃO 6 – CTA PRINCIPAL (PREÇO) */}
+      {/* SEÇÃO 6 – OFERTA (ATUALIZADA) */}
       <SectionContainer className="py-24">
         <div className="relative rounded-[3rem] overflow-hidden p-8 md:p-16 lg:p-24 text-center bg-card border border-primary/30 shadow-[0_0_100px_rgba(160,145,234,0.1)] max-w-5xl mx-auto">
           <div className="glow-purple -top-40 -left-40 opacity-40 animate-pulse-glow" />
           <div className="glow-purple -bottom-40 -right-40 opacity-40 animate-pulse-glow" />
           
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-headline font-bold mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-headline font-bold mb-6 tracking-tight text-white">
             Comece sua jornada do <br className="hidden md:block" /> MVP ao SaaS hoje
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-16 leading-relaxed">
@@ -239,7 +200,7 @@ export default function LandingPage() {
           <div className="space-y-4 mb-16">
             <p className="text-muted-foreground line-through text-lg font-medium opacity-60">De R$ 497,00</p>
             <div className="flex flex-col items-center justify-center">
-              <div className="text-5xl md:text-7xl font-bold tracking-tighter">
+              <div className="text-5xl md:text-7xl font-bold tracking-tighter text-white">
                 12x R$ <span className="text-primary">19,70</span>
               </div>
               <p className="text-sm md:text-base text-muted-foreground mt-2">ou R$ 197,00 à vista</p>
@@ -261,7 +222,7 @@ export default function LandingPage() {
 
       {/* SEÇÃO 7 – FAQ */}
       <SectionContainer id="faq" className="max-w-4xl">
-        <h2 className="text-3xl md:text-4xl font-headline font-bold mb-12 text-center">Dúvidas Frequentes</h2>
+        <h2 className="text-3xl md:text-4xl font-headline font-bold mb-12 text-center text-white">Dúvidas Frequentes</h2>
         <Accordion type="single" collapsible className="w-full space-y-4">
           {[
             { q: "Preciso saber programar?", a: "Não! O curso é focado em Vibe Coding e uso de IA, permitindo que qualquer pessoa com determinação consiga construir seu Micro SaaS." },
@@ -271,7 +232,7 @@ export default function LandingPage() {
             { q: "Vou conseguir criar um SaaS real?", a: "Com certeza. Ao final do curso você terá um projeto funcional, versionado e pronto para deploy." }
           ].map((item, i) => (
             <AccordionItem key={i} value={`item-${i}`} className="border border-white/10 rounded-2xl px-6 bg-white/5 data-[state=open]:border-primary/40 transition-all">
-              <AccordionTrigger className="text-left font-bold text-lg hover:no-underline">
+              <AccordionTrigger className="text-left font-bold text-lg hover:no-underline text-white">
                 {item.q}
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground text-base pb-6 leading-relaxed">
