@@ -40,14 +40,12 @@ export function Header() {
 	return (
 		<header
 			className={cn('fixed top-0 z-50 w-full border-b border-transparent transition-all duration-300', {
-				'bg-background/95 border-white/5 backdrop-blur-lg py-0':
-					scrolled,
-        'py-2': !scrolled
+				'bg-background/95 border-white/5 backdrop-blur-lg': scrolled,
 			})}
 		>
 			<nav className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-4">
-				<div className="font-headline font-bold text-xl tracking-tight flex items-center gap-2">
-					<div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+				<div className="font-headline font-bold text-xl tracking-tight flex items-center gap-2 group cursor-pointer">
+					<div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
 						<Rocket className="w-5 h-5 text-background" />
 					</div>
 					<span className="hidden sm:inline">Do MVP ao SaaS</span>
@@ -58,8 +56,9 @@ export function Header() {
 							{link.label}
 						</a>
 					))}
-					<Button variant="outline" className="border-primary/20 hover:bg-primary/10 text-primary">Entrar</Button>
-					<Button className="rounded-full bg-primary text-background hover:bg-primary/90">Começar</Button>
+					<Button className="rounded-full bg-primary text-background hover:bg-primary/90 font-bold px-6">
+						Começar agora
+					</Button>
 				</div>
 				<Button
 					size="icon"
@@ -90,10 +89,7 @@ export function Header() {
 					))}
 				</div>
 				<div className="flex flex-col gap-2 pt-4 border-t border-white/5">
-					<Button variant="outline" className="w-full bg-transparent">
-						Entrar
-					</Button>
-					<Button className="w-full">Começar agora</Button>
+					<Button className="w-full bg-primary text-background font-bold">Começar agora</Button>
 				</div>
 			</MobileMenu>
 		</header>

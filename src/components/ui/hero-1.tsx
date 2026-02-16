@@ -31,8 +31,10 @@ export function HeroSection() {
 					aria-hidden="true"
 					className="absolute inset-0 -z-10 size-full overflow-hidden pointer-events-none"
 				>
-					<div className="absolute inset-y-0 left-4 w-px bg-gradient-to-b from-transparent via-white/5 to-white/5 md:left-8" />
-					<div className="absolute inset-y-0 right-4 w-px bg-gradient-to-b from-transparent via-white/5 to-white/5 md:right-8" />
+					<div className="absolute inset-y-0 left-4 w-px bg-gradient-to-b from-transparent via-white/10 to-white/10 md:left-8" />
+					<div className="absolute inset-y-0 right-4 w-px bg-gradient-to-b from-transparent via-white/10 to-white/10 md:right-8" />
+					<div className="absolute inset-y-0 left-8 w-px bg-gradient-to-b from-transparent via-white/5 to-white/5 md:left-12" />
+					<div className="absolute inset-y-0 right-8 w-px bg-gradient-to-b from-transparent via-white/5 to-white/5 md:right-12" />
 				</div>
 
 				<div
@@ -49,13 +51,13 @@ export function HeroSection() {
 
 				<h1
 					className={cn(
-						"fade-in slide-in-from-bottom-10 animate-in text-balance fill-mode-backwards text-center text-5xl font-headline font-bold tracking-tight delay-100 duration-500 ease-out md:text-7xl lg:text-8xl"
+						"fade-in slide-in-from-bottom-10 animate-in text-balance fill-mode-backwards text-center text-5xl font-headline font-bold tracking-tight delay-100 duration-500 ease-out md:text-7xl lg:text-8xl text-shadow-premium"
 					)}
 				>
 					Do MVP ao <span className="text-primary italic">SaaS</span>
 				</h1>
 
-				<p className="fade-in slide-in-from-bottom-10 mx-auto max-w-3xl animate-in fill-mode-backwards text-center text-base text-muted-foreground tracking-wide delay-200 duration-500 ease-out sm:text-lg md:text-xl leading-relaxed">
+				<p className="fade-in slide-in-from-bottom-10 mx-auto max-w-2xl animate-in fill-mode-backwards text-center text-base text-muted-foreground tracking-wide delay-200 duration-500 ease-out sm:text-lg md:text-xl leading-relaxed">
 					Aprenda a criar, estruturar e monetizar um Micro SaaS do zero usando Vibe Coding e IA, mesmo sem ser programador profissional.
 				</p>
 
@@ -64,9 +66,9 @@ export function HeroSection() {
 						Quero começar agora
 						<ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
 					</Button>
-					<Button size="lg" variant="ghost" className="rounded-full px-10 h-14 text-lg border border-white/10 hover:bg-white/5 w-full sm:w-auto">
+					<Button size="lg" variant="outline" className="rounded-full px-10 h-14 text-lg border-white/10 hover:bg-white/10 hover:text-white transition-all w-full sm:w-auto">
 						<PhoneCall className="size-4 mr-2" />
-						Falar com consultor
+						Converse comigo
 					</Button>
 				</div>
 			</div>

@@ -18,15 +18,15 @@ export function LogoCloud({ className, logos, ...props }: LogoCloudProps) {
     <div
       {...props}
       className={cn(
-        "overflow-hidden py-4 [mask-image:linear-gradient(to_right,transparent,black,transparent)]",
+        "overflow-hidden py-4 [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]",
         className
       )}
     >
-      <InfiniteSlider gap={42} reverse duration={25} durationOnHover={40}>
+      <InfiniteSlider gap={64} reverse duration={30} durationOnHover={60}>
         {logos.map((logo) => (
           <img
             alt={logo.alt}
-            className="pointer-events-none h-6 select-none md:h-8 dark:brightness-0 dark:invert opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all"
+            className="pointer-events-none h-6 select-none md:h-8 dark:brightness-0 dark:invert opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"
             height={logo.height || "auto"}
             key={`logo-${logo.alt}`}
             loading="lazy"
