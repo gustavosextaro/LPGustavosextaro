@@ -25,7 +25,7 @@ export function HeroSection() {
 			</div>
 
 			{/* main content */}
-			<div className="relative flex flex-col items-center justify-center gap-5 pt-32 pb-12 px-6">
+			<div className="relative flex flex-col items-center justify-center gap-5 pt-32 pb-24 px-6">
 				{/* X Content Faded Borders */}
 				<div
 					aria-hidden="true"
@@ -78,9 +78,9 @@ export function HeroSection() {
 
 export function LogosSection() {
 	return (
-		<section className="relative space-y-8 pt-4 pb-20">
-			<h2 className="text-center font-headline font-medium text-lg text-muted-foreground tracking-tight md:text-xl">
-				Domine a stack <span className="text-white">moderna</span>
+		<section className="relative space-y-8 py-16">
+			<h2 className="text-center font-headline font-medium text-lg text-white/90 tracking-tight md:text-xl">
+				Domine a stack <span className="text-primary">moderna</span>
 			</h2>
 			<div className="relative z-10 mx-auto max-w-4xl px-6">
 				<LogoCloud logos={logos} />

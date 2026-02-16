@@ -40,9 +40,9 @@ export default function LandingPage() {
 
       {/* Hero Section */}
       <HeroSection />
-      <div className="-mt-16 sm:-mt-24">
-        <LogosSection />
-      </div>
+      
+      {/* Logos Section - Removida a margem negativa que causava sobreposição */}
+      <LogosSection />
 
       {/* SEÇÃO 2 – CONTEXTUALIZAÇÃO */}
       <SectionContainer id="context" className="bg-white/2 border-y border-white/5">
@@ -229,8 +229,8 @@ export default function LandingPage() {
           <div className="glow-purple -top-40 -left-40 opacity-40 animate-pulse-glow" />
           <div className="glow-purple -bottom-40 -right-40 opacity-40 animate-pulse-glow" />
           
-          <h2 className="text-4xl md:text-6xl font-headline font-bold mb-6 tracking-tight">
-            Comece sua jornada hoje
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-headline font-bold mb-6 tracking-tight">
+            Comece sua jornada do <br className="hidden md:block" /> MVP ao SaaS hoje
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-16 leading-relaxed">
             Transforme suas ideias em produtos digitais reais com o método Do MVP ao SaaS.
