@@ -184,7 +184,7 @@ export default function LandingPage() {
         </div>
       </SectionContainer>
 
-      {/* SEÇÃO 6 – OFERTA (ATUALIZADA) */}
+      {/* SEÇÃO 6 – OFERTA */}
       <SectionContainer className="py-24">
         <div className="relative rounded-[3rem] overflow-hidden p-8 md:p-16 lg:p-24 text-center bg-card border border-primary/30 shadow-[0_0_100px_rgba(160,145,234,0.1)] max-w-5xl mx-auto">
           <div className="glow-purple -top-40 -left-40 opacity-40 animate-pulse-glow" />
