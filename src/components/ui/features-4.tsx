@@ -6,7 +6,7 @@ export function Features() {
             <div className="mx-auto max-w-5xl space-y-12 px-6">
                 <div className="relative z-10 max-w-3xl text-left">
                     <h2 className="text-2xl md:text-3xl font-headline font-bold text-white mb-8">
-                        Este conteúdo é ideal para quem:
+                        Esse conteúdo é ideal para:
                     </h2>
                 </div>
 
