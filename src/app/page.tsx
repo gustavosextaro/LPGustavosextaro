@@ -1,22 +1,19 @@
-
 'use client';
 
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { 
   Rocket, 
   Target, 
   Lightbulb, 
   Monitor, 
   CheckCircle2, 
-  Clock, 
   Zap, 
   Github, 
-  ShieldCheck, 
-  ArrowRight,
   ChevronRight,
   PlayCircle,
-  Sparkles
+  Sparkles,
+  HelpCircle,
+  Home
 } from "lucide-react";
 import { SectionContainer } from "@/components/SectionContainer";
 import { 
@@ -26,20 +23,29 @@ import {
   AccordionTrigger 
 } from "@/components/ui/accordion";
 import Image from "next/image";
-import { Header } from "@/components/ui/header-1";
 import { HeroSection, LogosSection } from "@/components/ui/hero-1";
+import { NavBar } from "@/components/ui/tubelight-navbar";
 
 export default function LandingPage() {
-  return (
-    <div className="min-h-screen bg-background selection:bg-primary/30 selection:text-white">
-      <Header />
+  const navItems = [
+    { name: 'Início', url: '#', icon: Home },
+    { name: 'Para quem?', url: '#context', icon: Target },
+    { name: 'Conteúdo', url: '#modules', icon: Zap },
+    { name: 'FAQ', url: '#faq', icon: HelpCircle }
+  ];
 
-      {/* Hero Section Integrada */}
+  return (
+    <div className="min-h-screen bg-[#000401] selection:bg-primary/30 selection:text-white">
+      <NavBar items={navItems} />
+
+      {/* Hero Section */}
       <HeroSection />
-      <LogosSection />
+      <div className="-mt-16 sm:-mt-24">
+        <LogosSection />
+      </div>
 
       {/* SEÇÃO 2 – CONTEXTUALIZAÇÃO */}
-      <SectionContainer id="context" className="bg-secondary/20 border-y border-white/5">
+      <SectionContainer id="context" className="bg-white/2 border-y border-white/5">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-headline font-bold mb-6">
@@ -71,7 +77,7 @@ export default function LandingPage() {
               className="object-cover"
               data-ai-hint="saas concept"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#000401]/80 to-transparent" />
           </div>
         </div>
       </SectionContainer>
@@ -88,7 +94,7 @@ export default function LandingPage() {
         <div className="grid md:grid-cols-3 gap-6">
           {[
             { icon: Zap, title: "Conteúdo direto ao ponto", desc: "Nada de teoria cansativa. Aprendizado prático desde o primeiro minuto." },
-            { icon: ShieldCheck, title: "Sem enrolação", desc: "Aulas focadas na execução e no resultado final esperado." },
+            { icon: Target, title: "Sem enrolação", desc: "Aulas focadas na execução e no resultado final esperado." },
             { icon: Monitor, title: "Foco em execução prática", desc: "Você verá a construção real acontecendo na sua frente." }
           ].map((item, i) => (
             <div key={i} className="p-8 rounded-2xl card-gradient text-left space-y-4 hover:border-primary/20 transition-all duration-300">
@@ -117,7 +123,7 @@ export default function LandingPage() {
             { title: "Projeto no GitHub", icon: Github },
             { title: "Pronto para validar", icon: Lightbulb }
           ].map((item, i) => (
-            <div key={i} className="flex flex-col items-center p-6 rounded-2xl bg-background/60 border border-white/5 text-center group hover:bg-background transition-all">
+            <div key={i} className="flex flex-col items-center p-6 rounded-2xl bg-[#000401]/60 border border-white/5 text-center group hover:bg-[#000401] transition-all">
               <div className="mb-4 text-primary group-hover:scale-110 transition-transform">
                 <item.icon className="w-8 h-8" />
               </div>
@@ -217,39 +223,8 @@ export default function LandingPage() {
         </p>
       </SectionContainer>
 
-      {/* SEÇÃO 6 – DIFERENCIAL */}
-      <SectionContainer className="bg-secondary/10">
-        <h2 className="text-3xl md:text-5xl font-headline font-bold mb-16 text-center">Por que este curso é diferente?</h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            "Foco em execução real, não só teoria",
-            "Aulas rápidas e diretas",
-            "Explicação simples para iniciantes",
-            "Uso de IA e Vibe Coding na prática",
-            "Mentalidade de produto desde o início"
-          ].map((diff, i) => (
-            <div key={i} className="flex gap-4 p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/20 transition-all">
-              <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                <CheckCircle2 className="w-5 h-5 text-primary" />
-              </div>
-              <span className="font-medium text-lg">{diff}</span>
-            </div>
-          ))}
-        </div>
-      </SectionContainer>
-
-      {/* SEÇÃO 7 – RESULTADO ESPERADO */}
-      <SectionContainer className="text-center">
-        <div className="max-w-4xl mx-auto p-12 rounded-[3rem] bg-gradient-to-b from-primary/10 to-transparent border border-primary/20">
-          <h2 className="text-3xl md:text-5xl font-headline font-bold mb-8">Do zero até um SaaS funcional</h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            Ao final do curso, você terá clareza sobre como criar, estruturar, publicar e validar um produto digital, entendendo não apenas a tecnologia, mas também o processo comercial e estratégico por trás de um SaaS.
-          </p>
-        </div>
-      </SectionContainer>
-
-      {/* SEÇÃO 8 – CTA PRINCIPAL (PREÇO) */}
-      <SectionContainer className="py-32">
+      {/* SEÇÃO 6 – CTA PRINCIPAL (PREÇO) */}
+      <SectionContainer className="py-24">
         <div className="relative rounded-[3rem] overflow-hidden p-8 md:p-16 lg:p-24 text-center bg-card border border-primary/30 shadow-[0_0_100px_rgba(160,145,234,0.1)] max-w-5xl mx-auto">
           <div className="glow-purple -top-40 -left-40 opacity-40 animate-pulse-glow" />
           <div className="glow-purple -bottom-40 -right-40 opacity-40 animate-pulse-glow" />
@@ -271,7 +246,7 @@ export default function LandingPage() {
             </div>
           </div>
 
-          <Button size="lg" className="h-20 px-12 md:px-20 rounded-2xl bg-white text-black hover:bg-white/90 text-xl font-bold uppercase tracking-wide group mb-12">
+          <Button size="lg" className="h-20 px-12 md:px-20 rounded-2xl bg-white text-[#000401] hover:bg-white/90 text-xl font-bold uppercase tracking-wide group mb-12">
             Quero acessar agora
           </Button>
 
@@ -284,7 +259,7 @@ export default function LandingPage() {
         </div>
       </SectionContainer>
 
-      {/* SEÇÃO 9 – FAQ */}
+      {/* SEÇÃO 7 – FAQ */}
       <SectionContainer id="faq" className="max-w-4xl">
         <h2 className="text-3xl md:text-4xl font-headline font-bold mb-12 text-center">Dúvidas Frequentes</h2>
         <Accordion type="single" collapsible className="w-full space-y-4">
@@ -308,7 +283,7 @@ export default function LandingPage() {
       </SectionContainer>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-white/5 bg-background">
+      <footer className="py-12 border-t border-white/5 bg-[#000401]">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-muted-foreground">
           <div className="font-headline font-bold text-white text-lg flex items-center gap-2">
             <Rocket className="w-5 h-5 text-primary" />
