@@ -25,7 +25,7 @@ export function HeroSection() {
 			</div>
 
 			{/* main content */}
-			<div className="relative flex flex-col items-center justify-center gap-5 pt-32 pb-24 px-6">
+			<div className="relative flex flex-col items-center justify-center gap-5 pt-24 pb-12 px-6">
 				{/* X Content Faded Borders */}
 				<div
 					aria-hidden="true"
@@ -57,11 +57,11 @@ export function HeroSection() {
 					Do MVP ao <span className="text-primary italic">SaaS</span>
 				</h1>
 
-				<p className="fade-in slide-in-from-bottom-10 mx-auto max-w-2xl animate-in fill-mode-backwards text-center text-base text-muted-foreground tracking-wide delay-200 duration-500 ease-out sm:text-lg md:text-xl leading-relaxed">
+				<p className="fade-in slide-in-from-bottom-10 mx-auto max-w-2xl animate-in fill-mode-backwards text-center text-base text-white/80 tracking-wide delay-200 duration-500 ease-out sm:text-lg md:text-xl leading-relaxed">
 					Aprenda a criar, estruturar e monetizar um Micro SaaS do zero usando Vibe Coding e IA, mesmo sem ser programador profissional.
 				</p>
 
-				<div className="fade-in slide-in-from-bottom-10 flex animate-in flex-col sm:flex-row items-center justify-center gap-4 fill-mode-backwards pt-4 delay-300 duration-500 ease-out">
+				<div className="fade-in slide-in-from-bottom-10 flex animate-in flex-col sm:flex-row items-center justify-center gap-4 fill-mode-backwards pt-2 delay-300 duration-500 ease-out">
 					<Button size="lg" className="rounded-full px-10 h-14 text-lg bg-primary text-background hover:bg-primary/90 font-bold group w-full sm:w-auto">
 						Quero começar agora
 						<ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -78,8 +78,8 @@ export function HeroSection() {
 
 export function LogosSection() {
 	return (
-		<section className="relative space-y-8 py-16">
-			<h2 className="text-center font-headline font-medium text-lg text-white/90 tracking-tight md:text-xl">
+		<section className="relative space-y-6 py-8">
+			<h2 className="text-center font-headline font-medium text-lg text-white tracking-tight md:text-xl">
 				Domine a stack <span className="text-primary">moderna</span>
 			</h2>
 			<div className="relative z-10 mx-auto max-w-4xl px-6">
