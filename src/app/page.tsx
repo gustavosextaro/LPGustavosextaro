@@ -13,6 +13,7 @@ import {
   PlayCircle,
   Sparkles,
   HelpCircle,
+  Home,
 } from "lucide-react";
 import { SectionContainer } from "@/components/SectionContainer";
 import { 
@@ -23,16 +24,25 @@ import {
 } from "@/components/ui/accordion";
 import { HeroSection, LogosSection } from "@/components/ui/hero-1";
 import { Features } from "@/components/ui/features-4";
+import { NavBar } from "@/components/ui/tubelight-navbar";
 
 export default function LandingPage() {
+  const navItems = [
+    { name: 'Início', url: '#', icon: Home },
+    { name: 'Para quem?', url: '#context', icon: Target },
+    { name: 'Conteúdo', url: '#modules', icon: Monitor },
+    { name: 'FAQ', url: '#faq', icon: HelpCircle }
+  ];
+
   return (
     <div className="min-h-screen bg-[#000401] selection:bg-primary/30 selection:text-white">
-      {/* O Header foi removido e aguarda o novo componente */}
+      {/* Nova Header Tubelight */}
+      <NavBar items={navItems} />
 
       {/* Hero Section */}
       <HeroSection />
       
-      {/* Logos Section */}
+      {/* Logos Section - Sem linhas divisórias e com logos brancos */}
       <LogosSection />
 
       {/* SEÇÃO 2 – PÚBLICO ALVO */}
