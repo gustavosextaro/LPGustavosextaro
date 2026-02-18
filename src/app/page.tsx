@@ -12,7 +12,10 @@ import {
   ChevronRight,
   PlayCircle,
   Sparkles,
-  HelpCircle,
+  Home,
+  Users,
+  LayoutList,
+  MessageCircle
 } from "lucide-react";
 import { SectionContainer } from "@/components/SectionContainer";
 import { 
@@ -23,10 +26,21 @@ import {
 } from "@/components/ui/accordion";
 import { HeroSection, LogosSection } from "@/components/ui/hero-1";
 import { Features } from "@/components/ui/features-4";
+import { NavBar } from "@/components/ui/tubelight-navbar";
 
 export default function LandingPage() {
+  const navItems = [
+    { name: 'Início', url: '#', icon: Home },
+    { name: 'Público', url: '#context', icon: Users },
+    { name: 'Conteúdo', url: '#modules', icon: LayoutList },
+    { name: 'FAQ', url: '#faq', icon: MessageCircle }
+  ];
+
   return (
     <div className="min-h-screen bg-[#000401] selection:bg-primary/30 selection:text-white">
+      {/* Header Corrigida */}
+      <NavBar items={navItems} />
+
       {/* Hero Section */}
       <HeroSection />
       
