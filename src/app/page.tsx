@@ -11,8 +11,6 @@ import {
   Home,
   ChevronRight,
   PlayCircle,
-  Sparkles,
-  ArrowRight,
   ArrowDown
 } from "lucide-react";
 import { SectionContainer } from "@/components/SectionContainer";
@@ -53,30 +51,12 @@ export default function LandingPage() {
       title: "Construindo na Prática",
       content: ["Dashboard e Dados", "UX básico para SaaS", "Interface + Banco Funcional"],
       objective: "Ver o SaaS ganhando vida."
-    },
-    {
-      id: 4,
-      title: "Deploy e Monetização",
-      content: ["Ambiente de Produção", "Modelos de Assinatura", "Erros comuns de iniciantes"],
-      objective: "Colocar no ar e faturar."
-    },
-    {
-      id: 5,
-      title: "Git e GitHub Sem Dor",
-      content: ["Commit, Push e Pull", "Segurança ao usar IA", "Organização de projetos"],
-      objective: "Versionamento profissional."
-    },
-    {
-      id: 6,
-      title: "Migração entre Ferramentas",
-      content: ["Firebase Studio e Windsurf", "Variáveis de ambiente", "Autonomia técnica"],
-      objective: "Independência de ferramenta."
     }
   ];
 
   return (
     <div className="min-h-screen bg-[#000401] selection:bg-primary/30 selection:text-white">
-      {/* Header Corrigido */}
+      {/* Header Corrigido para não bloquear cliques */}
       <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none pt-6">
         <div className="pointer-events-auto">
           <NavBar items={navItems} />
@@ -106,22 +86,22 @@ export default function LandingPage() {
             { 
               icon: Target, 
               title: "Conceitos gerais", 
-              desc: "A teoria necessária para todo o entendimento de siglas, Stacks e conceitos necessários." 
+              desc: "Fundamentos estruturais sobre stacks, siglas, arquitetura e lógica de projetos SaaS." 
             },
             { 
               icon: Monitor, 
               title: "Conteúdo prático", 
-              desc: "Aulas teóricas com embasamento prático e com atividades no final de cada módulo." 
+              desc: "Conteúdo teórico com aplicação prática e exercícios orientados para construção real." 
             },
             { 
               icon: Users, 
               title: "Acompanhamento ao vivo", 
-              desc: "Chamadas semanais em grupo construindo sistemas do zero." 
+              desc: "Sessões semanais de construção ao vivo, análise de projetos e suporte técnico direcionado." 
             }
           ].map((item, i) => (
-            <div key={i} className="p-8 rounded-2xl bg-white/[0.03] border border-white/5 text-left space-y-4 hover:border-primary/20 transition-all duration-300 group">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <item.icon className="w-6 h-6 text-primary" />
+            <div key={i} className="p-8 rounded-2xl bg-white/[0.03] border border-white/5 text-left space-y-4 hover:border-white/10 transition-all duration-300 group">
+              <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center transition-colors">
+                <item.icon className="w-6 h-6 text-white/80" />
               </div>
               <h3 className="text-xl font-bold font-headline text-white">{item.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
@@ -142,7 +122,7 @@ export default function LandingPage() {
         <FeaturesSectionWithHoverEffects />
       </SectionContainer>
 
-      {/* SEÇÃO 5 – MÓDULOS (Refinada para 3 cards + botão) */}
+      {/* SEÇÃO 5 – MÓDULOS */}
       <SectionContainer id="modules" className="pt-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="max-w-2xl">
@@ -156,14 +136,14 @@ export default function LandingPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {modules.slice(0, 3).map((aula) => (
-            <div key={aula.id} className="group bg-white/[0.03] rounded-3xl p-8 relative overflow-hidden transition-all hover:scale-[1.02] border border-white/5 hover:border-primary/30">
-              <div className="text-xs font-bold text-primary mb-4 uppercase tracking-widest">Aula 0{aula.id}</div>
+          {modules.map((aula) => (
+            <div key={aula.id} className="group bg-white/[0.03] rounded-3xl p-8 relative overflow-hidden transition-all hover:scale-[1.02] border border-white/5 hover:border-white/10">
+              <div className="text-xs font-bold text-white/40 mb-4 uppercase tracking-widest">Aula 0{aula.id}</div>
               <h3 className="text-xl font-bold font-headline mb-6 text-white">{aula.title}</h3>
               <ul className="space-y-3 mb-8">
                 {aula.content.map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                    <ChevronRight className="w-4 h-4 text-white/20 shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
@@ -172,7 +152,7 @@ export default function LandingPage() {
                 <div className="text-xs text-muted-foreground italic">
                   Objetivo: <span className="text-white/80 not-italic">{aula.objective}</span>
                 </div>
-                <PlayCircle className="w-6 h-6 text-primary/40 group-hover:text-primary transition-colors" />
+                <PlayCircle className="w-6 h-6 text-white/20 group-hover:text-white/60 transition-colors" />
               </div>
             </div>
           ))}
@@ -194,9 +174,9 @@ export default function LandingPage() {
 
       {/* SEÇÃO 6 – OFERTA */}
       <SectionContainer id="offer" className="py-24">
-        <div className="relative rounded-[3rem] overflow-hidden p-8 md:p-16 lg:p-24 text-center bg-card border border-primary/30 shadow-[0_0_100px_rgba(160,145,234,0.1)] max-w-5xl mx-auto">
-          <div className="glow-purple -top-40 -left-40 opacity-40 animate-pulse-glow" />
-          <div className="glow-purple -bottom-40 -right-40 opacity-40 animate-pulse-glow" />
+        <div className="relative rounded-[3rem] overflow-hidden p-8 md:p-16 lg:p-24 text-center bg-card border border-white/5 shadow-[0_0_100px_rgba(255,255,255,0.02)] max-w-5xl mx-auto">
+          <div className="glow-purple -top-40 -left-40 opacity-20 animate-pulse-glow" />
+          <div className="glow-purple -bottom-40 -right-40 opacity-20 animate-pulse-glow" />
           
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-headline font-bold mb-6 tracking-tight text-white">
             Comece sua jornada do <br className="hidden md:block" /> MVP ao SaaS hoje
@@ -239,7 +219,7 @@ export default function LandingPage() {
             { q: "O curso é teórico ou prático?", a: "Totalmente prático! A teoria é introduzida enquanto construímos o produto real." },
             { q: "Vou conseguir criar um SaaS real?", a: "Com certeza. Ao final do curso você terá um projeto funcional, versionado e pronto para deploy." }
           ].map((item, i) => (
-            <AccordionItem key={i} value={`item-${i}`} className="border border-white/10 rounded-2xl px-6 bg-white/5 data-[state=open]:border-primary/40 transition-all">
+            <AccordionItem key={i} value={`item-${i}`} className="border border-white/10 rounded-2xl px-6 bg-white/5 data-[state=open]:border-white/20 transition-all">
               <AccordionTrigger className="text-left font-bold text-lg hover:no-underline text-white">
                 {item.q}
               </AccordionTrigger>
