@@ -14,51 +14,51 @@ import {
 export function FeaturesSectionWithHoverEffects() {
   const features = [
     {
-      title: "Domínio prático de IDEs e Stacks modernas",
+      title: "Domínio de IDEs e Stacks",
       description:
-        "Entendimento claro de como utilizar diferentes IDEs e ferramentas como Lovable, Firebase, Antigravity e Windsurf de forma estratégica, sem depender de uma única plataforma ou ambiente.",
+        "Domínio estratégico de ferramentas como Lovable, Firebase e Windsurf, garantindo total autonomia e independência técnica.",
       icon: <IconTerminal2 className="w-6 h-6" />,
     },
     {
-      title: "Conhecimento completo sobre Git e GitHub",
+      title: "Git e GitHub Profissional",
       description:
-        "Versionamento do projeto na prática, organização de repositório, commits, histórico de alterações e segurança para evoluir o projeto sem medo de quebrar tudo.",
+        "Versionamento real com organização de repositórios e histórico de alterações para uma evolução segura do software.",
       icon: <IconBrandGithub className="w-6 h-6" />,
     },
     {
-      title: "Estrutura lógica com banco de dados funcional",
+      title: "Estrutura de Dados e Lógica",
       description:
-        "Organização de dados, leitura, cadastro e conexão com banco de dados real, compreendendo a lógica por trás de aplicações SaaS e sistemas digitais.",
+        "Conexão com bancos reais e estruturação lógica funcional, dominando os pilares de sistemas e aplicações digitais.",
       icon: <IconDatabase className="w-6 h-6" />,
     },
     {
-      title: "Um MVP construído do zero absoluto",
+      title: "MVP Construído do Zero",
       description:
-        "Criação de um Micro SaaS desde a ideia inicial até uma aplicação funcional, com interface, lógica e estrutura profissional pronta para testes.",
+        "Construção de um Micro SaaS funcional da ideia ao deploy, com arquitetura profissional pronta para validação.",
       icon: <IconRocket className="w-6 h-6" />,
     },
     {
-      title: "Deploy, produção e variáveis de ambiente",
+      title: "Deploy e Infraestrutura",
       description:
-        "Publicação do projeto online, configuração de ambiente, variáveis e entendimento do fluxo entre desenvolvimento, teste e produção.",
+        "Publicação em ambiente de produção com gestão de variáveis e domínio total do fluxo entre desenvolvimento e teste.",
       icon: <IconCloud className="w-6 h-6" />,
     },
     {
-      title: "Estrutura real de um projeto SaaS",
+      title: "Arquitetura Real SaaS",
       description:
-        "Compreensão prática da arquitetura de um SaaS, incluindo organização de pastas, fluxo do sistema, separação entre interface, lógica e banco de dados, permitindo construir projetos com base sólida e escalável.",
+        "Arquitetura escalável com fluxos de sistema otimizados e separação clara entre interface, lógica e banco de dados.",
       icon: <IconLayout className="w-6 h-6" />,
     },
     {
-      title: "Autonomia para evoluir e escalar o projeto",
+      title: "Autonomia de Evolução",
       description:
-        "Capacidade de ajustar, melhorar e expandir o próprio projeto após a construção do MVP, sem depender de terceiros ou ficar preso a uma única ferramenta ou ambiente.",
+        "Capacidade técnica para expandir o projeto de forma independente, sem limitações de ferramentas ou dependência de terceiros.",
       icon: <IconUserCheck className="w-6 h-6" />,
     },
     {
-      title: "Clareza total do processo do zero ao produto online",
+      title: "Ciclo Completo de Produto",
       description:
-        "Entendimento completo do caminho desde a ideia inicial até um software funcional online, passando por construção, organização, versionamento, estruturação e publicação do projeto em ambiente real.",
+        "Visão integral do ciclo de vida do software, passando pela estruturação, versionamento e lançamento em mercado real.",
       icon: <IconChecklist className="w-6 h-6" />,
     },
   ];
