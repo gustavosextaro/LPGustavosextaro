@@ -15,28 +15,8 @@ export function HeroSection() {
 				<div className="absolute inset-0 -top-14 isolate -z-10 bg-[radial-gradient(35%_80%_at_49%_0%,rgba(160,145,234,0.1),transparent)]" />
 			</div>
 
-			{/* X Bold Faded Borders */}
-			<div
-				aria-hidden="true"
-				className="absolute inset-0 mx-auto hidden min-h-screen w-full max-w-5xl lg:block pointer-events-none"
-			>
-				<div className="absolute inset-y-0 left-0 z-10 h-full w-px bg-white/5" />
-				<div className="absolute inset-y-0 right-0 z-10 h-full w-px bg-white/5" />
-			</div>
-
 			{/* main content */}
 			<div className="relative flex flex-col items-center justify-center gap-5 pt-32 pb-8 px-6">
-				{/* X Content Faded Borders */}
-				<div
-					aria-hidden="true"
-					className="absolute inset-0 -z-10 size-full overflow-hidden pointer-events-none"
-				>
-					<div className="absolute inset-y-0 left-4 w-px bg-gradient-to-b from-transparent via-white/10 to-white/10 md:left-8" />
-					<div className="absolute inset-y-0 right-4 w-px bg-gradient-to-b from-transparent via-white/10 to-white/10 md:right-8" />
-					<div className="absolute inset-y-0 left-8 w-px bg-gradient-to-b from-transparent via-white/5 to-white/5 md:left-12" />
-					<div className="absolute inset-y-0 right-8 w-px bg-gradient-to-b from-transparent via-white/5 to-white/5 md:right-12" />
-				</div>
-
 				<div
 					className={cn(
 						"group mx-auto flex w-fit items-center gap-3 rounded-full border border-white/10 bg-white/5 px-3 py-1 shadow-sm",
@@ -51,7 +31,7 @@ export function HeroSection() {
 
 				<h1
 					className={cn(
-						"fade-in slide-in-from-bottom-10 animate-in text-balance fill-mode-backwards text-center text-5xl font-headline font-bold tracking-tight delay-100 duration-500 ease-out md:text-7xl lg:text-8xl text-shadow-premium text-white"
+						"fade-in slide-in-from-bottom-10 animate-in text-balance text-center text-5xl font-headline font-bold tracking-tight delay-100 duration-500 ease-out md:text-7xl lg:text-8xl text-shadow-premium text-white"
 					)}
 				>
 					Do MVP ao <span className="text-primary italic">SaaS</span>
@@ -61,12 +41,16 @@ export function HeroSection() {
 					Aprenda a criar, estruturar e monetizar um Micro SaaS do zero usando Vibe Coding e IA, mesmo sem ser programador profissional.
 				</p>
 
-				<div className="fade-in slide-in-from-bottom-10 flex animate-in flex-col sm:flex-row items-center justify-center gap-4 fill-mode-backwards pt-4 delay-300 duration-500 ease-out">
+				<div className="fade-in slide-in-from-bottom-10 flex animate-in flex-col sm:flex-row items-center justify-center gap-4 fill-mode-backwards pt-4 delay-300 duration-500 ease-out w-full sm:w-auto">
 					<Button size="lg" className="rounded-full px-10 h-14 text-lg bg-white text-[#000401] hover:bg-white/90 font-bold group w-full sm:w-auto transition-transform hover:scale-105 active:scale-95">
 						Quero começar agora
 						<ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
 					</Button>
-					<Button size="lg" variant="outline" className="rounded-full px-10 h-14 text-lg border-white/20 text-white bg-white/5 hover:bg-white/10 hover:border-white/40 transition-all w-full sm:w-auto">
+					<Button 
+            size="lg" 
+            variant="outline" 
+            className="rounded-full px-10 h-14 text-lg border-white/20 text-white bg-white/5 hover:bg-white/10 hover:text-white hover:border-white/40 transition-all w-full sm:w-auto active:bg-white/20"
+          >
 						<PhoneCall className="size-4 mr-2" />
 						Converse comigo
 					</Button>

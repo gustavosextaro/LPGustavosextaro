@@ -15,7 +15,8 @@ import {
   Home,
   Users,
   LayoutList,
-  MessageCircle
+  MessageCircle,
+  PhoneCall
 } from "lucide-react";
 import { SectionContainer } from "@/components/SectionContainer";
 import { 
@@ -38,7 +39,7 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-[#000401] selection:bg-primary/30 selection:text-white">
-      {/* Header Corrigida */}
+      {/* NavBar Corrigida */}
       <NavBar items={navItems} />
 
       {/* Hero Section */}
@@ -55,15 +56,27 @@ export default function LandingPage() {
         <div className="max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-headline font-bold mb-6 text-white">O que você vai aprender</h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Uma sequência de aulas gravadas, curtas e objetivas (média de 15 minutos), focadas em ensinar desde a mentalidade de produto até a criação, estruturação e deploy.
+            No Mvp ao SaaS, o objetivo central é contextualizar toda a estrutra lógica, funcional e estratégica que um SaaS, ou MVP, precisam ter para escalar no mercado.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { icon: Zap, title: "Conteúdo direto ao ponto", desc: "Nada de teoria cansativa. Aprendizado prático desde o primeiro minuto." },
-            { icon: Target, title: "Sem enrolação", desc: "Aulas focadas na execução e no resultado final esperado." },
-            { icon: Monitor, title: "Foco em execução prática", desc: "Você verá a construção real acontecendo na sua frente." }
+            { 
+              icon: Target, 
+              title: "Conceitos gerais", 
+              desc: "A teoria necessária para todo o entendimento de siglas, Stacks e conceitos necessários." 
+            },
+            { 
+              icon: Monitor, 
+              title: "Conteúdo prático", 
+              desc: "Aulas teóricas com embasamento prático e com atividades no final de cada módulo." 
+            },
+            { 
+              icon: Users, 
+              title: "Acompanhamento ao vivo", 
+              desc: "Chamadas semanais em grupo construindo sistemas do zero." 
+            }
           ].map((item, i) => (
             <div key={i} className="p-8 rounded-2xl bg-white/[0.03] border border-white/5 text-left space-y-4 hover:border-primary/20 transition-all duration-300">
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
