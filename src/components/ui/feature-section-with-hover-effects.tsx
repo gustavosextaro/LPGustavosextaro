@@ -6,6 +6,9 @@ import {
   IconDatabase,
   IconRocket,
   IconCloud,
+  IconLayout,
+  IconUserCheck,
+  IconChecklist,
 } from "@tabler/icons-react";
 
 export function FeaturesSectionWithHoverEffects() {
@@ -39,6 +42,24 @@ export function FeaturesSectionWithHoverEffects() {
       description:
         "Publicação do projeto online, configuração de ambiente, variáveis e entendimento do fluxo entre desenvolvimento, teste e produção.",
       icon: <IconCloud className="w-6 h-6" />,
+    },
+    {
+      title: "Estrutura real de um projeto SaaS",
+      description:
+        "Compreensão prática da arquitetura de um SaaS, incluindo organização de pastas, fluxo do sistema, separação entre interface, lógica e banco de dados, permitindo construir projetos com base sólida e escalável.",
+      icon: <IconLayout className="w-6 h-6" />,
+    },
+    {
+      title: "Autonomia para evoluir e escalar o projeto",
+      description:
+        "Capacidade de ajustar, melhorar e expandir o próprio projeto após a construção do MVP, sem depender de terceiros ou ficar preso a uma única ferramenta ou ambiente.",
+      icon: <IconUserCheck className="w-6 h-6" />,
+    },
+    {
+      title: "Clareza total do processo do zero ao produto online",
+      description:
+        "Entendimento completo do caminho desde a ideia inicial até um software funcional online, passando por construção, organização, versionamento, estruturação e publicação do projeto em ambiente real.",
+      icon: <IconChecklist className="w-6 h-6" />,
     },
   ];
 
