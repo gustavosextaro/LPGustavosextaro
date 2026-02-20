@@ -1,21 +1,19 @@
+
 'use client';
 
 import { Button } from "@/components/ui/button";
 import { 
   Rocket, 
   Target, 
-  Lightbulb, 
   Monitor, 
-  CheckCircle2, 
-  Zap, 
-  Github, 
+  Users, 
+  LayoutList, 
+  MessageCircle, 
+  Home,
   ChevronRight,
   PlayCircle,
   Sparkles,
-  Home,
-  Users,
-  LayoutList,
-  MessageCircle,
+  ArrowRight,
   PhoneCall
 } from "lucide-react";
 import { SectionContainer } from "@/components/SectionContainer";
@@ -28,6 +26,7 @@ import {
 import { HeroSection, LogosSection } from "@/components/ui/hero-1";
 import { Features } from "@/components/ui/features-4";
 import { NavBar } from "@/components/ui/tubelight-navbar";
+import { FeaturesSectionWithHoverEffects } from "@/components/ui/feature-section-with-hover-effects";
 
 export default function LandingPage() {
   const navItems = [
@@ -39,8 +38,12 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-[#000401] selection:bg-primary/30 selection:text-white">
-      {/* NavBar Corrigida */}
-      <NavBar items={navItems} />
+      {/* Header Corrigido */}
+      <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none pt-6">
+        <div className="pointer-events-auto">
+          <NavBar items={navItems} />
+        </div>
+      </div>
 
       {/* Hero Section */}
       <HeroSection />
@@ -78,8 +81,8 @@ export default function LandingPage() {
               desc: "Chamadas semanais em grupo construindo sistemas do zero." 
             }
           ].map((item, i) => (
-            <div key={i} className="p-8 rounded-2xl bg-white/[0.03] border border-white/5 text-left space-y-4 hover:border-primary/20 transition-all duration-300">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+            <div key={i} className="p-8 rounded-2xl bg-white/[0.03] border border-white/5 text-left space-y-4 hover:border-primary/20 transition-all duration-300 group">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                 <item.icon className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-xl font-bold font-headline text-white">{item.title}</h3>
@@ -89,29 +92,16 @@ export default function LandingPage() {
         </div>
       </SectionContainer>
 
-      {/* SEÇÃO 4 – O QUE VOCÊ VAI CONSTRUIR */}
-      <SectionContainer className="bg-primary/5 rounded-[3rem] my-12">
+      {/* SEÇÃO 4 – O QUE VOCÊ TERÁ AO FINAL (ATUALIZADA) */}
+      <SectionContainer className="my-12">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-headline font-bold mb-4 text-white">O que você terá ao final</h2>
-          <p className="text-muted-foreground">O aluno não apenas aprende teoria, mas sai com um produto digital real em funcionamento.</p>
+          <h2 className="text-3xl md:text-5xl font-headline font-bold mb-4 text-white">O que você terá ao final do curso</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Mais do que teoria. Você sai com conhecimento técnico aplicado e um projeto real estruturado do zero.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-          {[
-            { title: "Micro SaaS funcional", icon: Rocket },
-            { title: "Interface estruturada", icon: Monitor },
-            { title: "Banco de dados", icon: CheckCircle2 },
-            { title: "Projeto no GitHub", icon: Github },
-            { title: "Pronto para validar", icon: Lightbulb }
-          ].map((item, i) => (
-            <div key={i} className="flex flex-col items-center p-6 rounded-2xl bg-[#000401]/60 border border-white/5 text-center group hover:bg-[#000401] transition-all">
-              <div className="mb-4 text-primary group-hover:scale-110 transition-transform">
-                <item.icon className="w-8 h-8" />
-              </div>
-              <span className="font-bold text-sm tracking-tight text-white">{item.title}</span>
-            </div>
-          ))}
-        </div>
+        <FeaturesSectionWithHoverEffects />
       </SectionContainer>
 
       {/* SEÇÃO 5 – MÓDULOS */}
