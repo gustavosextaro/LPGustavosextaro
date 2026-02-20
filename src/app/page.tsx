@@ -1,4 +1,3 @@
-
 'use client';
 
 import { Button } from "@/components/ui/button";
@@ -14,7 +13,7 @@ import {
   PlayCircle,
   Sparkles,
   ArrowRight,
-  PhoneCall
+  ArrowDown
 } from "lucide-react";
 import { SectionContainer } from "@/components/SectionContainer";
 import { 
@@ -34,6 +33,45 @@ export default function LandingPage() {
     { name: 'Público', url: '#context', icon: Users },
     { name: 'Conteúdo', url: '#modules', icon: LayoutList },
     { name: 'FAQ', url: '#faq', icon: MessageCircle }
+  ];
+
+  const modules = [
+    {
+      id: 1,
+      title: "Fundamentos do SaaS",
+      content: ["Conceitos de Front, Back e DB", "O que é MVP e Micro SaaS", "Introdução ao Vibe Coding"],
+      objective: "Criar mentalidade de produto."
+    },
+    {
+      id: 2,
+      title: "Ferramentas e Stack",
+      content: ["Lovable e Firebase", "GitHub para versionamento", "Custos reais de um Micro SaaS"],
+      objective: "Conectar todas as ferramentas."
+    },
+    {
+      id: 3,
+      title: "Construindo na Prática",
+      content: ["Dashboard e Dados", "UX básico para SaaS", "Interface + Banco Funcional"],
+      objective: "Ver o SaaS ganhando vida."
+    },
+    {
+      id: 4,
+      title: "Deploy e Monetização",
+      content: ["Ambiente de Produção", "Modelos de Assinatura", "Erros comuns de iniciantes"],
+      objective: "Colocar no ar e faturar."
+    },
+    {
+      id: 5,
+      title: "Git e GitHub Sem Dor",
+      content: ["Commit, Push e Pull", "Segurança ao usar IA", "Organização de projetos"],
+      objective: "Versionamento profissional."
+    },
+    {
+      id: 6,
+      title: "Migração entre Ferramentas",
+      content: ["Firebase Studio e Windsurf", "Variáveis de ambiente", "Autonomia técnica"],
+      objective: "Independência de ferramenta."
+    }
   ];
 
   return (
@@ -92,8 +130,8 @@ export default function LandingPage() {
         </div>
       </SectionContainer>
 
-      {/* SEÇÃO 4 – O QUE VOCÊ TERÁ AO FINAL (ATUALIZADA) */}
-      <SectionContainer className="my-12">
+      {/* SEÇÃO 4 – O QUE VOCÊ TERÁ AO FINAL */}
+      <SectionContainer className="pb-0">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-headline font-bold mb-4 text-white">O que você terá ao final do curso</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -104,58 +142,21 @@ export default function LandingPage() {
         <FeaturesSectionWithHoverEffects />
       </SectionContainer>
 
-      {/* SEÇÃO 5 – MÓDULOS */}
-      <SectionContainer id="modules">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      {/* SEÇÃO 5 – MÓDULOS (Refinada para 3 cards + botão) */}
+      <SectionContainer id="modules" className="pt-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-5xl font-headline font-bold mb-4 text-white">Conteúdo completo</h2>
             <p className="text-muted-foreground text-lg">Uma jornada estruturada do zero absoluto até o deploy final.</p>
           </div>
           <div className="bg-white/5 border border-white/10 px-6 py-3 rounded-full flex items-center gap-3">
             <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-sm font-medium text-white/80">7 Aulas • 100% Gravadas</span>
+            <span className="text-sm font-medium text-white/80 tracking-tight">Aulas Gravadas/ Ao vivo</span>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            {
-              id: 1,
-              title: "Fundamentos do SaaS",
-              content: ["Conceitos de Front, Back e DB", "O que é MVP e Micro SaaS", "Introdução ao Vibe Coding"],
-              objective: "Criar mentalidade de produto."
-            },
-            {
-              id: 2,
-              title: "Ferramentas e Stack",
-              content: ["Lovable e Firebase", "GitHub para versionamento", "Custos reais de um Micro SaaS"],
-              objective: "Conectar todas as ferramentas."
-            },
-            {
-              id: 3,
-              title: "Construindo na Prática",
-              content: ["Dashboard e Dados", "UX básico para SaaS", "Interface + Banco Funcional"],
-              objective: "Ver o SaaS ganhando vida."
-            },
-            {
-              id: 4,
-              title: "Deploy e Monetização",
-              content: ["Ambiente de Produção", "Modelos de Assinatura", "Erros comuns de iniciantes"],
-              objective: "Colocar no ar e faturar."
-            },
-            {
-              id: 5,
-              title: "Git e GitHub Sem Dor",
-              content: ["Commit, Push e Pull", "Segurança ao usar IA", "Organização de projetos"],
-              objective: "Versionamento profissional."
-            },
-            {
-              id: 6,
-              title: "Migração entre Ferramentas",
-              content: ["Firebase Studio e Windsurf", "Variáveis de ambiente", "Autonomia técnica"],
-              objective: "Independência de ferramenta."
-            }
-          ].map((aula) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {modules.slice(0, 3).map((aula) => (
             <div key={aula.id} className="group bg-white/[0.03] rounded-3xl p-8 relative overflow-hidden transition-all hover:scale-[1.02] border border-white/5 hover:border-primary/30">
               <div className="text-xs font-bold text-primary mb-4 uppercase tracking-widest">Aula 0{aula.id}</div>
               <h3 className="text-xl font-bold font-headline mb-6 text-white">{aula.title}</h3>
@@ -175,23 +176,24 @@ export default function LandingPage() {
               </div>
             </div>
           ))}
-          {/* Aula 7 - Destaque */}
-          <div className="lg:col-span-1 group bg-primary/5 rounded-3xl p-8 border border-primary/20">
-            <div className="text-xs font-bold text-primary mb-4 uppercase tracking-widest">Aula 07</div>
-            <h3 className="text-xl font-bold font-headline mb-4 text-white">Polimento e Aparência Real</h3>
-            <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-              Dê o toque profissional que diferencia amadores de produtos reais. UX, fluxo de usuário e organização final do código.
-            </p>
-            <div className="flex items-center gap-2 text-primary font-bold text-sm">
-              <Sparkles className="w-4 h-4" />
-              Finalização do Projeto
-            </div>
-          </div>
+        </div>
+
+        <div className="flex justify-center">
+          <Button 
+            variant="ghost" 
+            className="group text-muted-foreground hover:text-white transition-all text-sm font-bold uppercase tracking-[0.2em] flex items-center gap-3"
+            asChild
+          >
+            <a href="#offer">
+              Ver cronograma completo
+              <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
+            </a>
+          </Button>
         </div>
       </SectionContainer>
 
       {/* SEÇÃO 6 – OFERTA */}
-      <SectionContainer className="py-24">
+      <SectionContainer id="offer" className="py-24">
         <div className="relative rounded-[3rem] overflow-hidden p-8 md:p-16 lg:p-24 text-center bg-card border border-primary/30 shadow-[0_0_100px_rgba(160,145,234,0.1)] max-w-5xl mx-auto">
           <div className="glow-purple -top-40 -left-40 opacity-40 animate-pulse-glow" />
           <div className="glow-purple -bottom-40 -right-40 opacity-40 animate-pulse-glow" />
