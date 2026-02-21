@@ -207,7 +207,7 @@ export default function LandingPage() {
             </div>
           </div>
 
-          <Button size="lg" className="h-20 px-12 md:px-20 rounded-2xl bg-white text-[#000401] hover:bg-white/90 text-xl font-bold uppercase tracking-wide group mb-12 transition-transform hover:scale-105" asChild>
+          <Button size="lg" className="h-16 md:h-20 px-6 md:px-20 rounded-2xl bg-white text-[#000401] hover:bg-white/90 text-lg md:text-xl font-bold uppercase tracking-wide group mb-12 transition-transform hover:scale-105 w-full sm:w-auto" asChild>
             <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Quero acessar agora</a>
           </Button>
 
