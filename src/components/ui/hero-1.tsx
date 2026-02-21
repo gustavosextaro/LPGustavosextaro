@@ -34,7 +34,10 @@ export function HeroSection() {
 						"fade-in slide-in-from-bottom-10 animate-in text-balance text-center text-5xl font-headline font-bold tracking-tight delay-100 duration-500 ease-out md:text-7xl lg:text-8xl text-shadow-premium text-white"
 					)}
 				>
-					Do MVP ao <span className="text-white italic">SaaS</span>
+					Do MVP ao <span className="relative inline-block">
+            <span className="text-white italic">SaaS</span>
+            <span className="bloom-white" />
+          </span>
 				</h1>
 
 				<p className="fade-in slide-in-from-bottom-10 mx-auto max-w-2xl animate-in fill-mode-backwards text-center text-base text-white/80 tracking-wide delay-200 duration-500 ease-out sm:text-lg md:text-xl leading-relaxed font-headline">

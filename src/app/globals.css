@@ -6,7 +6,7 @@
   :root {
     --background: 135 100% 0.8%; /* Correspondente a #000401 */
     --foreground: 0 0% 98%;
-    --card: 240 10% 6%;
+    --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
@@ -16,7 +16,7 @@
     --secondary-foreground: 0 0% 98%;
     --muted: 240 10% 12%;
     --muted-foreground: 240 5% 64.9%;
-    --accent: 0 0% 90%;
+    --accent: 0 0% 100%;
     --accent-foreground: 240 10% 3.9%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
@@ -48,13 +48,26 @@
   z-index: -1;
 }
 
+.bloom-white {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  filter: blur(40px);
+  z-index: -1;
+  pointer-events: none;
+}
+
 .card-gradient {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .text-shadow-premium {
-  text-shadow: 0 0px 50px rgba(255, 255, 255, 0.15);
+  text-shadow: 0 0px 50px rgba(255, 255, 255, 0.2);
 }
 
 .mask-y-fade {
