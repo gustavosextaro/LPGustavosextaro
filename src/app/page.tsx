@@ -261,7 +261,7 @@ export default function LandingPage() {
           </h2>
           
           <div className="max-w-3xl mx-auto">
-            <p className="text-xl md:text-2xl text-white/90 font-headline leading-relaxed">
+            <p className="text-xl text-white/90 font-headline leading-relaxed">
               Aqui você não encontrará apenas explicações genéricas, mas um processo claro de construção, versionamento, deploy e organização de um projeto funcional.
             </p>
           </div>
@@ -270,13 +270,15 @@ export default function LandingPage() {
             <Button size="lg" className="h-16 px-10 rounded-2xl bg-white text-black hover:bg-white/90 font-bold text-lg w-full sm:w-auto transition-transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
               Garantir minha vaga agora
             </Button>
-            <ShimmerButton 
-              className="h-16 px-10 rounded-2xl w-full sm:w-auto shadow-2xl"
-              background="rgba(255, 255, 255, 0.05)"
-            >
-              <WhatsAppIcon />
-              <span className="font-bold text-lg">Tirar minhas dúvidas</span>
-            </ShimmerButton>
+            <a href="https://wa.link/7pjg5p" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <ShimmerButton 
+                className="h-16 px-10 rounded-2xl w-full sm:w-auto shadow-2xl"
+                background="rgba(255, 255, 255, 0.05)"
+              >
+                <WhatsAppIcon />
+                <span className="font-bold text-lg">Tirar minhas dúvidas</span>
+              </ShimmerButton>
+            </a>
           </div>
 
           <div className="flex items-center justify-center gap-4 pt-6 text-[10px] md:text-xs font-bold text-white/40 uppercase tracking-[0.2em]">
