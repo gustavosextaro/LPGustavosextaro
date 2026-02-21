@@ -57,8 +57,8 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#000401] selection:bg-primary/30 selection:text-white">
-      {/* Header Corrigido */}
+    <div className="min-h-screen bg-[#000401] selection:bg-white/30 selection:text-white">
+      {/* Header Centralizado e Corrigido */}
       <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none pt-6">
         <div className="pointer-events-auto">
           <NavBar items={navItems} />
@@ -177,8 +177,8 @@ export default function LandingPage() {
       {/* SEÇÃO 6 – OFERTA */}
       <SectionContainer id="offer" className="py-24">
         <div className="relative rounded-[3rem] overflow-hidden p-8 md:p-16 lg:p-24 text-center bg-card border border-white/5 shadow-[0_0_100px_rgba(255,255,255,0.02)] max-w-5xl mx-auto">
-          <div className="glow-purple -top-40 -left-40 opacity-20 animate-pulse-glow" />
-          <div className="glow-purple -bottom-40 -right-40 opacity-20 animate-pulse-glow" />
+          <div className="glow-accent -top-40 -left-40 opacity-20 animate-pulse-glow" />
+          <div className="glow-accent -bottom-40 -right-40 opacity-20 animate-pulse-glow" />
           
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-headline font-bold mb-6 tracking-tight text-white">
             Comece sua jornada do <br className="hidden md:block" /> MVP ao SaaS hoje
@@ -191,7 +191,7 @@ export default function LandingPage() {
             <p className="text-muted-foreground line-through text-lg font-medium opacity-60">De R$ 497,00</p>
             <div className="flex flex-col items-center justify-center">
               <div className="text-5xl md:text-7xl font-bold tracking-tighter text-white">
-                12x R$ <span className="text-primary">19,70</span>
+                12x R$ <span className="text-white">19,70</span>
               </div>
               <p className="text-sm md:text-base text-muted-foreground mt-2">ou R$ 197,00 à vista</p>
             </div>
@@ -237,7 +237,7 @@ export default function LandingPage() {
       <footer className="py-12 border-t border-white/5 bg-[#000401]">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-muted-foreground">
           <div className="font-headline font-bold text-white text-lg flex items-center gap-2">
-            <Rocket className="w-5 h-5 text-primary" />
+            <Rocket className="w-5 h-5 text-white" />
             Do MVP ao SaaS
           </div>
           <div className="flex gap-8">

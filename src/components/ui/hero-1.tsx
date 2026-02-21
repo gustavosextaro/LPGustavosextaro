@@ -7,12 +7,12 @@ import { LogoCloud } from "@/components/ui/logo-cloud-3";
 export function HeroSection() {
 	return (
 		<section className="mx-auto w-full max-w-5xl relative">
-			{/* Top Shades */}
+			{/* Top Shades - Fade Branco */}
 			<div
 				aria-hidden="true"
 				className="absolute inset-0 isolate hidden overflow-hidden lg:block pointer-events-none"
 			>
-				<div className="absolute inset-0 -top-14 isolate -z-10 bg-[radial-gradient(35%_80%_at_49%_0%,rgba(160,145,234,0.1),transparent)]" />
+				<div className="absolute inset-0 -top-14 isolate -z-10 bg-[radial-gradient(35%_80%_at_49%_0%,rgba(255,255,255,0.05),transparent)]" />
 			</div>
 
 			{/* main content */}
@@ -23,7 +23,7 @@ export function HeroSection() {
 						"fade-in slide-in-from-bottom-10 animate-in fill-mode-backwards transition-all delay-500 duration-500 ease-out"
 					)}
 				>
-					<Rocket className="size-3 text-primary" />
+					<Rocket className="size-3 text-white/80" />
 					<span className="text-xs font-medium text-white/80 tracking-tight text-shadow-premium">O caminho mais rápido para o seu SaaS</span>
 					<span className="block h-3 border-l border-white/10" />
 					<ArrowRight className="size-3 text-white/60 duration-150 ease-out group-hover:translate-x-1" />
@@ -34,7 +34,7 @@ export function HeroSection() {
 						"fade-in slide-in-from-bottom-10 animate-in text-balance text-center text-5xl font-headline font-bold tracking-tight delay-100 duration-500 ease-out md:text-7xl lg:text-8xl text-shadow-premium text-white"
 					)}
 				>
-					Do MVP ao <span className="text-primary italic">SaaS</span>
+					Do MVP ao <span className="text-white italic">SaaS</span>
 				</h1>
 
 				<p className="fade-in slide-in-from-bottom-10 mx-auto max-w-2xl animate-in fill-mode-backwards text-center text-base text-white/80 tracking-wide delay-200 duration-500 ease-out sm:text-lg md:text-xl leading-relaxed font-headline">
