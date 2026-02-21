@@ -181,7 +181,7 @@ export default function LandingPage() {
       </SectionContainer>
 
       <SectionContainer id="offer" className="py-24 px-4 md:px-12">
-        <div className="relative rounded-[2.5rem] md:rounded-[3rem] overflow-hidden px-6 py-12 md:p-16 lg:p-24 text-center bg-card border border-white/5 shadow-[0_0_100px_rgba(255,255,255,0.02)] max-w-5xl mx-auto">
+        <div className="relative rounded-[2.5rem] md:rounded-[3rem] overflow-hidden px-4 md:px-12 py-12 md:p-16 lg:p-24 text-center bg-card border border-white/5 shadow-[0_0_100px_rgba(255,255,255,0.02)] max-w-5xl mx-auto">
           <div className="glow-accent -top-40 -left-40 opacity-20 animate-pulse-glow" />
           <div className="glow-accent -bottom-40 -right-40 opacity-20 animate-pulse-glow" />
           
@@ -200,7 +200,7 @@ export default function LandingPage() {
               <p className="text-muted-foreground line-through text-lg font-medium opacity-60">De R$ 197,00</p>
             </div>
             <div className="flex flex-col items-center justify-center">
-              <div className="text-5xl md:text-7xl font-bold tracking-tighter text-white">
+              <div className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter text-white">
                 12x R$ <span className="text-white">12,91</span>
               </div>
               <p className="text-sm md:text-base text-muted-foreground mt-2 font-headline">ou R$ 127,00 à vista</p>
@@ -209,7 +209,7 @@ export default function LandingPage() {
 
           <Button 
             size="lg" 
-            className="h-16 md:h-20 w-full sm:w-auto px-6 md:px-20 rounded-2xl bg-white text-[#000401] hover:bg-white/90 text-lg md:text-xl font-bold uppercase tracking-wide group mb-12 transition-transform hover:scale-105 active:scale-95" 
+            className="h-16 md:h-20 w-full sm:w-auto px-4 md:px-20 rounded-2xl bg-white text-[#000401] hover:bg-white/90 text-lg md:text-xl font-bold uppercase tracking-wide group mb-12 transition-transform hover:scale-105 active:scale-95" 
             asChild
           >
             <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Quero acessar agora</a>
@@ -254,28 +254,28 @@ export default function LandingPage() {
             Ainda tem dúvidas?
           </h2>
           
-          <div className="max-w-3xl mx-auto px-4 md:px-0">
+          <div className="max-w-3xl mx-auto px-4">
             <p className="text-base md:text-lg text-white/90 font-headline leading-relaxed">
               Aqui você não encontrará apenas explicações genéricas, mas um processo claro de construção,<br className="hidden md:block" /> versionamento, deploy e organização de um projeto funcional.
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8 px-4 md:px-0">
-            <Button size="lg" className="h-16 px-10 rounded-2xl bg-white text-black hover:bg-white/90 font-bold text-sm w-full sm:w-auto transition-transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.1)]" asChild>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8 px-4">
+            <Button size="lg" className="h-14 md:h-16 px-6 md:px-10 rounded-2xl bg-white text-black hover:bg-white/90 font-bold text-xs md:text-sm w-full sm:w-auto transition-transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.1)]" asChild>
               <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Garantir minha vaga agora</a>
             </Button>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
               <ShimmerButton 
-                className="h-16 px-10 rounded-2xl w-full sm:w-auto shadow-2xl"
+                className="h-14 md:h-16 px-6 md:px-10 rounded-2xl w-full sm:w-auto shadow-2xl"
                 background="rgba(255, 255, 255, 0.05)"
               >
                 <WhatsAppIcon />
-                <span className="font-bold text-sm">Tirar minhas dúvidas</span>
+                <span className="font-bold text-xs md:text-sm">Tirar minhas dúvidas</span>
               </ShimmerButton>
             </a>
           </div>
 
-          <div className="flex items-center justify-center gap-4 pt-6 text-[10px] md:text-xs font-bold text-white/40 uppercase tracking-[0.2em] px-4 md:px-0">
+          <div className="flex items-center justify-center gap-4 pt-6 text-[10px] md:text-xs font-bold text-white/40 uppercase tracking-[0.2em] px-4">
             <span>Vagas limitadas</span>
             <span className="hidden sm:inline w-1 h-1 rounded-full bg-white/20" />
             <span>Acesso imediato</span>
