@@ -12,7 +12,9 @@ import {
   ChevronRight,
   PlayCircle,
   ArrowDown,
-  CreditCard
+  CreditCard,
+  PhoneCall,
+  ArrowRight
 } from "lucide-react";
 import { SectionContainer } from "@/components/SectionContainer";
 import { 
@@ -114,7 +116,7 @@ export default function LandingPage() {
 
       {/* SEÇÃO 4 – O QUE VOCÊ TERÁ AO FINAL */}
       <SectionContainer className="pb-0">
-        <div className="text-center mb-6">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-5xl font-headline font-bold mb-4 text-white text-shadow-premium">O que você terá ao final do curso</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto font-headline">
             Mais do que teoria. Você sai com conhecimento técnico aplicado e um projeto real estruturado do zero.
@@ -187,13 +189,18 @@ export default function LandingPage() {
             Transforme suas ideias em produtos digitais reais com o método Do MVP ao SaaS.
           </p>
 
-          <div className="space-y-4 mb-16">
-            <p className="text-muted-foreground line-through text-lg font-medium opacity-60">De R$ 497,00</p>
+          <div className="space-y-6 mb-16">
+            <div className="flex flex-col items-center gap-3">
+              <div className="bg-white/10 text-white text-[10px] font-bold uppercase tracking-[0.2em] px-4 py-1.5 rounded-full border border-white/20">
+                40% de desconto
+              </div>
+              <p className="text-muted-foreground line-through text-lg font-medium opacity-60">De R$ 197,00</p>
+            </div>
             <div className="flex flex-col items-center justify-center">
               <div className="text-5xl md:text-7xl font-bold tracking-tighter text-white">
-                12x R$ <span className="text-white">19,70</span>
+                12x R$ <span className="text-white">12,70</span>
               </div>
-              <p className="text-sm md:text-base text-muted-foreground mt-2">ou R$ 197,00 à vista</p>
+              <p className="text-sm md:text-base text-muted-foreground mt-2 font-headline">ou R$ 127,00 à vista</p>
             </div>
           </div>
 
