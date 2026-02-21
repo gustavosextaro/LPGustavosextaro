@@ -180,15 +180,15 @@ export default function LandingPage() {
         </div>
       </SectionContainer>
 
-      <SectionContainer id="offer" className="py-24">
-        <div className="relative rounded-[3rem] overflow-hidden p-8 md:p-16 lg:p-24 text-center bg-card border border-white/5 shadow-[0_0_100px_rgba(255,255,255,0.02)] max-w-5xl mx-auto">
+      <SectionContainer id="offer" className="py-24 px-4 md:px-12">
+        <div className="relative rounded-[2.5rem] md:rounded-[3rem] overflow-hidden px-6 py-12 md:p-16 lg:p-24 text-center bg-card border border-white/5 shadow-[0_0_100px_rgba(255,255,255,0.02)] max-w-5xl mx-auto">
           <div className="glow-accent -top-40 -left-40 opacity-20 animate-pulse-glow" />
           <div className="glow-accent -bottom-40 -right-40 opacity-20 animate-pulse-glow" />
           
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-headline font-bold mb-6 tracking-tight text-white text-shadow-premium">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-headline font-bold mb-6 tracking-tight text-white text-shadow-premium leading-tight">
             Comece sua jornada do <br className="hidden md:block" /> MVP ao SaaS hoje
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-16 leading-relaxed font-headline">
+          <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto mb-16 leading-relaxed font-headline">
             Transforme suas ideias em produtos digitais reais com o método Do MVP ao SaaS.
           </p>
 
@@ -207,7 +207,11 @@ export default function LandingPage() {
             </div>
           </div>
 
-          <Button size="lg" className="h-16 md:h-20 px-6 md:px-20 rounded-2xl bg-white text-[#000401] hover:bg-white/90 text-lg md:text-xl font-bold uppercase tracking-wide group mb-12 transition-transform hover:scale-105 w-full sm:w-auto" asChild>
+          <Button 
+            size="lg" 
+            className="h-16 md:h-20 w-full sm:w-auto px-6 md:px-20 rounded-2xl bg-white text-[#000401] hover:bg-white/90 text-lg md:text-xl font-bold uppercase tracking-wide group mb-12 transition-transform hover:scale-105 active:scale-95" 
+            asChild
+          >
             <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Quero acessar agora</a>
           </Button>
 
@@ -220,7 +224,7 @@ export default function LandingPage() {
         </div>
       </SectionContainer>
 
-      <SectionContainer id="faq" className="max-w-4xl">
+      <SectionContainer id="faq" className="max-w-4xl px-4 md:px-12">
         <h2 className="text-3xl md:text-5xl font-headline font-bold mb-12 text-center text-white text-shadow-premium">Dúvidas Frequentes</h2>
         <Accordion type="single" collapsible className="w-full space-y-4">
           {[
@@ -250,13 +254,13 @@ export default function LandingPage() {
             Ainda tem dúvidas?
           </h2>
           
-          <div className="max-w-3xl mx-auto">
-            <p className="text-lg text-white/90 font-headline leading-relaxed">
-              Aqui você não encontrará apenas explicações genéricas, mas um processo claro de construção, versionamento, deploy e organização de um projeto funcional.
+          <div className="max-w-3xl mx-auto px-4 md:px-0">
+            <p className="text-base md:text-lg text-white/90 font-headline leading-relaxed">
+              Aqui você não encontrará apenas explicações genéricas, mas um processo claro de construção,<br className="hidden md:block" /> versionamento, deploy e organização de um projeto funcional.
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8 px-4 md:px-0">
             <Button size="lg" className="h-16 px-10 rounded-2xl bg-white text-black hover:bg-white/90 font-bold text-sm w-full sm:w-auto transition-transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.1)]" asChild>
               <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Garantir minha vaga agora</a>
             </Button>
@@ -271,11 +275,11 @@ export default function LandingPage() {
             </a>
           </div>
 
-          <div className="flex items-center justify-center gap-4 pt-6 text-[10px] md:text-xs font-bold text-white/40 uppercase tracking-[0.2em]">
+          <div className="flex items-center justify-center gap-4 pt-6 text-[10px] md:text-xs font-bold text-white/40 uppercase tracking-[0.2em] px-4 md:px-0">
             <span>Vagas limitadas</span>
-            <span className="w-1 h-1 rounded-full bg-white/20" />
+            <span className="hidden sm:inline w-1 h-1 rounded-full bg-white/20" />
             <span>Acesso imediato</span>
-            <span className="w-1 h-1 rounded-full bg-white/20" />
+            <span className="hidden sm:inline w-1 h-1 rounded-full bg-white/20" />
             <span>Construção prática</span>
           </div>
         </div>
