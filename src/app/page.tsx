@@ -58,7 +58,7 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-[#000401] selection:bg-primary/30 selection:text-white">
-      {/* Header Corrigido para não bloquear cliques */}
+      {/* Header Corrigido */}
       <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none pt-6">
         <div className="pointer-events-auto">
           <NavBar items={navItems} />
@@ -114,7 +114,7 @@ export default function LandingPage() {
 
       {/* SEÇÃO 4 – O QUE VOCÊ TERÁ AO FINAL */}
       <SectionContainer className="pb-0">
-        <div className="text-center mb-16">
+        <div className="text-center mb-6">
           <h2 className="text-3xl md:text-5xl font-headline font-bold mb-4 text-white">O que você terá ao final do curso</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto font-headline">
             Mais do que teoria. Você sai com conhecimento técnico aplicado e um projeto real estruturado do zero.
