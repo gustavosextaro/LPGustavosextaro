@@ -77,7 +77,7 @@ export default function LandingPage() {
       {/* SEÇÃO 3 – O QUE É O CURSO */}
       <SectionContainer className="text-center">
         <div className="max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold mb-6 text-white">O que você vai aprender</h2>
+          <h2 className="text-3xl md:text-5xl font-headline font-bold mb-6 text-white">O que você vai aprender</h2>
           <p className="text-muted-foreground text-lg leading-relaxed font-headline">
             No Mvp ao SaaS, o objetivo central é contextualizar toda a estrutra lógica, funcional e estratégica que um SaaS, ou MVP, precisam ter para escalar no mercado.
           </p>
@@ -212,7 +212,7 @@ export default function LandingPage() {
 
       {/* SEÇÃO 7 – FAQ */}
       <SectionContainer id="faq" className="max-w-4xl">
-        <h2 className="text-3xl md:text-4xl font-headline font-bold mb-12 text-center text-white">Dúvidas Frequentes</h2>
+        <h2 className="text-3xl md:text-5xl font-headline font-bold mb-12 text-center text-white">Dúvidas Frequentes</h2>
         <Accordion type="single" collapsible className="w-full space-y-4">
           {[
             { q: "Preciso saber programar?", a: "Não! O curso é focado em Vibe Coding e uso de IA, permitindo que qualquer pessoa com determinação consiga construir seu Micro SaaS." },

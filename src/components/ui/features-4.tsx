@@ -4,8 +4,8 @@ export function Features() {
     return (
         <section id="context" className="py-16 md:py-24 bg-[#000401]">
             <div className="mx-auto max-w-5xl space-y-12 px-6">
-                <div className="relative z-10 max-w-3xl text-left">
-                    <h2 className="text-2xl md:text-3xl font-headline font-bold text-white mb-8">
+                <div className="relative z-10 max-w-4xl text-left">
+                    <h2 className="text-3xl md:text-5xl font-headline font-bold text-white mb-12">
                         Esse conteúdo é ideal para:
                     </h2>
                 </div>
