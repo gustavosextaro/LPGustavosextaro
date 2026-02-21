@@ -253,25 +253,17 @@ export default function LandingPage() {
 
       {/* SEÇÃO 8 – CTA FINAL */}
       <SectionContainer className="py-24 border-t border-white/5 overflow-hidden">
-        <div className="max-w-4xl mx-auto text-center space-y-10 relative">
+        <div className="max-w-4xl mx-auto text-center space-y-12 relative">
           <div className="glow-accent top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10" />
           
           <h2 className="text-4xl md:text-6xl font-headline font-bold text-white text-shadow-premium tracking-tight">
             Ainda tem dúvidas?
           </h2>
           
-          <div className="space-y-6">
-            <p className="text-xl md:text-2xl text-white/90 font-headline leading-tight max-w-3xl mx-auto">
-              Você está a um passo de sair da teoria e construir um produto digital real, com estrutura profissional e aplicação prática.
+          <div className="max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-white/90 font-headline leading-relaxed">
+              Aqui você não encontrará apenas explicações genéricas, mas um processo claro de construção, versionamento, deploy e organização de um projeto funcional.
             </p>
-            <div className="text-muted-foreground text-lg space-y-4 max-w-2xl mx-auto font-headline">
-              <p>
-                Se você quer parar de apenas consumir conteúdo superficial e finalmente entender como criar, estruturar e publicar um projeto SaaS do zero, este é o próximo passo lógico.
-              </p>
-              <p>
-                Aqui você não encontrará apenas explicações genéricas, mas um processo claro de construção, versionamento, deploy e organização de um projeto funcional.
-              </p>
-            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
