@@ -52,12 +52,15 @@ export function HeroSection() {
 						</a>
 					</Button>
 					<Button 
+            asChild
             size="lg" 
             variant="outline" 
             className="rounded-full px-10 h-14 text-lg border-white/20 text-white bg-white/5 hover:bg-white/10 hover:text-white hover:border-white/40 transition-all w-full sm:w-auto active:bg-white/20"
           >
-						<PhoneCall className="size-4 mr-2" />
-						Converse comigo
+						<a href="https://wa.link/7pjg5p" target="_blank" rel="noopener noreferrer">
+              <PhoneCall className="size-4 mr-2" />
+              Converse comigo
+            </a>
 					</Button>
 				</div>
 			</div>
