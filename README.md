@@ -10,19 +10,13 @@ Siga estes passos exatamente para garantir que seu código seja versionado corre
 
 2. **Abra o terminal** aqui no Firebase Studio.
 
-3. **Inicialize o Git**:
-   ```bash
-   git init
-   ```
+3. **Ignore as mensagens "command not found"**: Elas são apenas estéticas do terminal e não impedem o processo.
 
-4. **Adicione os arquivos**:
-   ```bash
-   git add .
-   ```
+4. **Se aparecer "nothing to commit, working tree clean"**: Isso significa que os arquivos já estão prontos para serem enviados. Você pode seguir direto para os comandos abaixo.
 
-5. **Crie o primeiro commit**:
+5. **Conecte ao seu repositório remoto** (Substitua a URL pela sua):
    ```bash
-   git commit -m "feat: landing page completa com checkout e links de suporte"
+   git remote add origin https://github.com/seu-usuario/seu-repositorio.git
    ```
 
 6. **Defina a branch principal**:
@@ -30,12 +24,7 @@ Siga estes passos exatamente para garantir que seu código seja versionado corre
    git branch -M main
    ```
 
-7. **Conecte ao seu repositório remoto** (Cole a URL que você copiou no passo 1):
-   ```bash
-   git remote add origin https://github.com/seu-usuario/seu-repositorio.git
-   ```
-
-8. **Faça o Push**:
+7. **Faça o Push**:
    ```bash
    git push -u origin main
    ```
