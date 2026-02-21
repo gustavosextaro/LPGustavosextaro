@@ -2,31 +2,34 @@
 
 Este projeto é uma Landing Page premium desenvolvida para o curso "Do MVP ao SaaS", utilizando Next.js, Tailwind CSS e Framer Motion.
 
-## 🚀 Como subir para o GitHub via Terminal
+## 🚀 Como subir para o GitHub (Primeira vez)
 
-Siga estes passos exatamente para garantir que seu código seja versionado corretamente:
-
-1. **Crie um repositório no GitHub**: Vá em github.com, crie um novo repositório (ex: `mvp-ao-saas`) e copie a URL (ex: `https://github.com/seu-usuario/mvp-ao-saas.git`).
-
-2. **Abra o terminal** aqui no Firebase Studio.
-
-3. **Ignore as mensagens "command not found"**: Elas são apenas estéticas do terminal e não impedem o processo.
-
-4. **Se aparecer "nothing to commit, working tree clean"**: Isso significa que os arquivos já estão prontos para serem enviados. Você pode seguir direto para os comandos abaixo.
-
-5. **Conecte ao seu repositório remoto** (Substitua a URL pela sua):
+1. **Crie um repositório no GitHub**: Vá em github.com, crie um novo repositório e copie a URL.
+2. **Conecte ao seu repositório remoto**:
    ```bash
    git remote add origin https://github.com/seu-usuario/seu-repositorio.git
    ```
-
-6. **Defina a branch principal**:
+3. **Defina a branch e envie**:
    ```bash
    git branch -M main
+   git push -u origin main
    ```
 
-7. **Faça o Push**:
+## 🔄 Como atualizar o código (Push Novamente)
+
+Sempre que você fizer mudanças e quiser enviá-las ao GitHub, use estes 3 comandos no terminal:
+
+1. **Prepare os arquivos**:
    ```bash
-   git push -u origin main
+   git add .
+   ```
+2. **Crie um registro da mudança**:
+   ```bash
+   git commit -m "Explique brevemente o que mudou"
+   ```
+3. **Envie para o GitHub**:
+   ```bash
+   git push
    ```
 
 ---
