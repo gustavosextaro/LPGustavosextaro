@@ -60,7 +60,7 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-[#000401] selection:bg-white/30 selection:text-white">
-      {/* Header Centralizado e Corrigido */}
+      {/* Header Centralizado */}
       <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none pt-6">
         <div className="pointer-events-auto">
           <NavBar items={navItems} />
@@ -204,8 +204,8 @@ export default function LandingPage() {
             </div>
           </div>
 
-          <Button size="lg" className="h-20 px-12 md:px-20 rounded-2xl bg-white text-[#000401] hover:bg-white/90 text-xl font-bold uppercase tracking-wide group mb-12 transition-transform hover:scale-105">
-            Quero acessar agora
+          <Button size="lg" className="h-20 px-12 md:px-20 rounded-2xl bg-white text-[#000401] hover:bg-white/90 text-xl font-bold uppercase tracking-wide group mb-12 transition-transform hover:scale-105" asChild>
+            <a href="#offer">Quero acessar agora</a>
           </Button>
 
           <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12 text-[10px] md:text-xs font-bold text-muted-foreground tracking-[0.2em] uppercase opacity-60">
@@ -238,6 +238,48 @@ export default function LandingPage() {
             </AccordionItem>
           ))}
         </Accordion>
+      </SectionContainer>
+
+      {/* SEÇÃO 8 – CTA FINAL */}
+      <SectionContainer className="py-24 border-t border-white/5 overflow-hidden">
+        <div className="max-w-4xl mx-auto text-center space-y-10 relative">
+          <div className="glow-accent top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10" />
+          
+          <h2 className="text-4xl md:text-6xl font-headline font-bold text-white text-shadow-premium tracking-tight">
+            Ainda tem dúvidas?
+          </h2>
+          
+          <div className="space-y-6">
+            <p className="text-xl md:text-2xl text-white/90 font-headline leading-tight max-w-3xl mx-auto">
+              Você está a um passo de sair da teoria e construir um produto digital real, com estrutura profissional e aplicação prática.
+            </p>
+            <div className="text-muted-foreground text-lg space-y-4 max-w-2xl mx-auto font-headline">
+              <p>
+                Se você quer parar de apenas consumir conteúdo superficial e finalmente entender como criar, estruturar e publicar um projeto SaaS do zero, este é o próximo passo lógico.
+              </p>
+              <p>
+                Aqui você não encontrará apenas explicações genéricas, mas um processo claro de construção, versionamento, deploy e organização de um projeto funcional.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+            <Button size="lg" className="h-16 px-10 rounded-2xl bg-white text-black hover:bg-white/90 font-bold text-lg w-full sm:w-auto transition-transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+              Garantir minha vaga agora
+            </Button>
+            <Button size="lg" variant="outline" className="h-16 px-10 rounded-2xl border-white/20 text-white hover:bg-white/5 hover:border-white/40 w-full sm:w-auto transition-all">
+              Tirar minhas dúvidas
+            </Button>
+          </div>
+
+          <div className="flex items-center justify-center gap-4 pt-6 text-[10px] md:text-xs font-bold text-white/40 uppercase tracking-[0.2em]">
+            <span>Vagas limitadas</span>
+            <span className="w-1 h-1 rounded-full bg-white/20" />
+            <span>Acesso imediato</span>
+            <span className="w-1 h-1 rounded-full bg-white/20" />
+            <span>Construção prática</span>
+          </div>
+        </div>
       </SectionContainer>
 
       {/* Footer */}
