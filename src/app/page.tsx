@@ -257,7 +257,7 @@ export default function LandingPage() {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
-            <Button size="lg" className="h-16 px-10 rounded-2xl bg-white text-black hover:bg-white/90 font-bold text-lg w-full sm:w-auto transition-transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.1)]" asChild>
+            <Button size="lg" className="h-16 px-10 rounded-2xl bg-white text-black hover:bg-white/90 font-bold text-sm w-full sm:w-auto transition-transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.1)]" asChild>
               <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Garantir minha vaga agora</a>
             </Button>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
@@ -266,7 +266,7 @@ export default function LandingPage() {
                 background="rgba(255, 255, 255, 0.05)"
               >
                 <WhatsAppIcon />
-                <span className="font-bold text-lg">Tirar minhas dúvidas</span>
+                <span className="font-bold text-sm">Tirar minhas dúvidas</span>
               </ShimmerButton>
             </a>
           </div>
@@ -284,7 +284,6 @@ export default function LandingPage() {
       <footer className="py-12 border-t border-white/5 bg-[#000401]">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-muted-foreground">
           <div className="font-headline font-bold text-white text-lg flex items-center gap-2">
-            <Rocket className="w-5 h-5 text-white" />
             Do MVP ao SaaS
           </div>
           <div className="flex gap-8">
