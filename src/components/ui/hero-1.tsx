@@ -37,14 +37,16 @@ export function HeroSection() {
 					Do MVP ao <span className="text-primary italic">SaaS</span>
 				</h1>
 
-				<p className="fade-in slide-in-from-bottom-10 mx-auto max-w-2xl animate-in fill-mode-backwards text-center text-base text-white/80 tracking-wide delay-200 duration-500 ease-out sm:text-lg md:text-xl leading-relaxed">
+				<p className="fade-in slide-in-from-bottom-10 mx-auto max-w-2xl animate-in fill-mode-backwards text-center text-base text-white/80 tracking-wide delay-200 duration-500 ease-out sm:text-lg md:text-xl leading-relaxed font-headline">
 					Aprenda a criar, estruturar e monetizar um Micro SaaS do zero usando Vibe Coding e IA, mesmo sem ser programador profissional.
 				</p>
 
 				<div className="fade-in slide-in-from-bottom-10 flex animate-in flex-col sm:flex-row items-center justify-center gap-4 fill-mode-backwards pt-4 delay-300 duration-500 ease-out w-full sm:w-auto">
-					<Button size="lg" className="rounded-full px-10 h-14 text-lg bg-white text-[#000401] hover:bg-white/90 font-bold group w-full sm:w-auto transition-transform hover:scale-105 active:scale-95">
-						Quero começar agora
-						<ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+					<Button asChild size="lg" className="rounded-full px-10 h-14 text-lg bg-white text-[#000401] hover:bg-white/90 font-bold group w-full sm:w-auto transition-transform hover:scale-105 active:scale-95">
+						<a href="#offer">
+							Quero começar agora
+							<ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+						</a>
 					</Button>
 					<Button 
             size="lg" 

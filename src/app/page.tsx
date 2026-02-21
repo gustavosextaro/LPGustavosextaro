@@ -11,7 +11,8 @@ import {
   Home,
   ChevronRight,
   PlayCircle,
-  ArrowDown
+  ArrowDown,
+  CreditCard
 } from "lucide-react";
 import { SectionContainer } from "@/components/SectionContainer";
 import { 
@@ -30,6 +31,7 @@ export default function LandingPage() {
     { name: 'Início', url: '#', icon: Home },
     { name: 'Público', url: '#context', icon: Users },
     { name: 'Conteúdo', url: '#modules', icon: LayoutList },
+    { name: 'Inscrição', url: '#offer', icon: CreditCard },
     { name: 'FAQ', url: '#faq', icon: MessageCircle }
   ];
 
@@ -76,7 +78,7 @@ export default function LandingPage() {
       <SectionContainer className="text-center">
         <div className="max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-headline font-bold mb-6 text-white">O que você vai aprender</h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
+          <p className="text-muted-foreground text-lg leading-relaxed font-headline">
             No Mvp ao SaaS, o objetivo central é contextualizar toda a estrutra lógica, funcional e estratégica que um SaaS, ou MVP, precisam ter para escalar no mercado.
           </p>
         </div>
@@ -99,7 +101,7 @@ export default function LandingPage() {
               desc: "Sessões semanais de construção ao vivo, análise de projetos e suporte técnico direcionado." 
             }
           ].map((item, i) => (
-            <div key={i} className="p-8 rounded-2xl bg-white/[0.03] border border-white/5 text-left space-y-4 hover:border-white/10 transition-all duration-300 group">
+            <div key={i} className="p-8 rounded-2xl bg-white/[0.03] border border-white/5 text-left space-y-4 transition-all duration-300 group">
               <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center transition-colors">
                 <item.icon className="w-6 h-6 text-white/80" />
               </div>
@@ -114,7 +116,7 @@ export default function LandingPage() {
       <SectionContainer className="pb-0">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-headline font-bold mb-4 text-white">O que você terá ao final do curso</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto font-headline">
             Mais do que teoria. Você sai com conhecimento técnico aplicado e um projeto real estruturado do zero.
           </p>
         </div>
@@ -127,7 +129,7 @@ export default function LandingPage() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-5xl font-headline font-bold mb-4 text-white">Conteúdo completo</h2>
-            <p className="text-muted-foreground text-lg">Uma jornada estruturada do zero absoluto até o deploy final.</p>
+            <p className="text-muted-foreground text-lg font-headline">Uma jornada estruturada do zero absoluto até o deploy final.</p>
           </div>
           <div className="bg-white/5 border border-white/10 px-6 py-3 rounded-full flex items-center gap-3">
             <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
@@ -137,7 +139,7 @@ export default function LandingPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {modules.map((aula) => (
-            <div key={aula.id} className="group bg-white/[0.03] rounded-3xl p-8 relative overflow-hidden transition-all hover:scale-[1.02] border border-white/5 hover:border-white/10">
+            <div key={aula.id} className="group bg-white/[0.03] rounded-3xl p-8 relative overflow-hidden transition-all border border-white/5">
               <div className="text-xs font-bold text-white/40 mb-4 uppercase tracking-widest">Aula 0{aula.id}</div>
               <h3 className="text-xl font-bold font-headline mb-6 text-white">{aula.title}</h3>
               <ul className="space-y-3 mb-8">
@@ -152,7 +154,7 @@ export default function LandingPage() {
                 <div className="text-xs text-muted-foreground italic">
                   Objetivo: <span className="text-white/80 not-italic">{aula.objective}</span>
                 </div>
-                <PlayCircle className="w-6 h-6 text-white/20 group-hover:text-white/60 transition-colors" />
+                <PlayCircle className="w-6 h-6 text-white/20 transition-colors" />
               </div>
             </div>
           ))}
@@ -181,7 +183,7 @@ export default function LandingPage() {
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-headline font-bold mb-6 tracking-tight text-white">
             Comece sua jornada do <br className="hidden md:block" /> MVP ao SaaS hoje
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-16 leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-16 leading-relaxed font-headline">
             Transforme suas ideias em produtos digitais reais com o método Do MVP ao SaaS.
           </p>
 
