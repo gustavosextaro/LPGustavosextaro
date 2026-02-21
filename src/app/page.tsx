@@ -261,7 +261,7 @@ export default function LandingPage() {
           </h2>
           
           <div className="max-w-3xl mx-auto">
-            <p className="text-xl text-white/90 font-headline leading-relaxed">
+            <p className="text-lg text-white/90 font-headline leading-relaxed">
               Aqui você não encontrará apenas explicações genéricas, mas um processo claro de construção, versionamento, deploy e organização de um projeto funcional.
             </p>
           </div>
