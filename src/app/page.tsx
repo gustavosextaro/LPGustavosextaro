@@ -77,7 +77,7 @@ export default function LandingPage() {
       {/* SEÇÃO 3 – O QUE É O CURSO */}
       <SectionContainer className="text-center">
         <div className="max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-headline font-bold mb-6 text-white">O que você vai aprender</h2>
+          <h2 className="text-3xl md:text-5xl font-headline font-bold mb-6 text-white text-shadow-premium">O que você vai aprender</h2>
           <p className="text-muted-foreground text-lg leading-relaxed font-headline">
             No Mvp ao SaaS, o objetivo central é contextualizar toda a estrutra lógica, funcional e estratégica que um SaaS, ou MVP, precisam ter para escalar no mercado.
           </p>
@@ -115,7 +115,7 @@ export default function LandingPage() {
       {/* SEÇÃO 4 – O QUE VOCÊ TERÁ AO FINAL */}
       <SectionContainer className="pb-0">
         <div className="text-center mb-6">
-          <h2 className="text-3xl md:text-5xl font-headline font-bold mb-4 text-white">O que você terá ao final do curso</h2>
+          <h2 className="text-3xl md:text-5xl font-headline font-bold mb-4 text-white text-shadow-premium">O que você terá ao final do curso</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto font-headline">
             Mais do que teoria. Você sai com conhecimento técnico aplicado e um projeto real estruturado do zero.
           </p>
@@ -125,14 +125,14 @@ export default function LandingPage() {
       </SectionContainer>
 
       {/* SEÇÃO 5 – MÓDULOS */}
-      <SectionContainer id="modules" className="pt-8">
+      <SectionContainer id="modules" className="pt-0">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-5xl font-headline font-bold mb-4 text-white">Conteúdo completo</h2>
+            <h2 className="text-3xl md:text-5xl font-headline font-bold mb-4 text-white text-shadow-premium">Conteúdo completo</h2>
             <p className="text-muted-foreground text-lg font-headline">Uma jornada estruturada do zero absoluto até o deploy final.</p>
           </div>
           <div className="bg-white/5 border border-white/10 px-6 py-3 rounded-full flex items-center gap-3">
-            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+            <div className="w-2 h-2 rounded-full bg-white animate-pulse" />
             <span className="text-sm font-medium text-white/80 tracking-tight">Aulas Gravadas/ Ao vivo</span>
           </div>
         </div>
@@ -180,7 +180,7 @@ export default function LandingPage() {
           <div className="glow-accent -top-40 -left-40 opacity-20 animate-pulse-glow" />
           <div className="glow-accent -bottom-40 -right-40 opacity-20 animate-pulse-glow" />
           
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-headline font-bold mb-6 tracking-tight text-white">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-headline font-bold mb-6 tracking-tight text-white text-shadow-premium">
             Comece sua jornada do <br className="hidden md:block" /> MVP ao SaaS hoje
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-16 leading-relaxed font-headline">
@@ -212,7 +212,7 @@ export default function LandingPage() {
 
       {/* SEÇÃO 7 – FAQ */}
       <SectionContainer id="faq" className="max-w-4xl">
-        <h2 className="text-3xl md:text-5xl font-headline font-bold mb-12 text-center text-white">Dúvidas Frequentes</h2>
+        <h2 className="text-3xl md:text-5xl font-headline font-bold mb-12 text-center text-white text-shadow-premium">Dúvidas Frequentes</h2>
         <Accordion type="single" collapsible className="w-full space-y-4">
           {[
             { q: "Preciso saber programar?", a: "Não! O curso é focado em Vibe Coding e uso de IA, permitindo que qualquer pessoa com determinação consiga construir seu Micro SaaS." },
