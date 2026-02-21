@@ -40,6 +40,9 @@ const WhatsAppIcon = () => (
 );
 
 export default function LandingPage() {
+  const CHECKOUT_URL = "https://pay.hub.la/BJnKLtoOxKRR0pZ0ddcQ";
+  const WHATSAPP_URL = "https://wa.link/7pjg5p";
+
   const navItems = [
     { name: 'Início', url: '#', icon: Home },
     { name: 'Público', url: '#context', icon: Users },
@@ -216,7 +219,7 @@ export default function LandingPage() {
           </div>
 
           <Button size="lg" className="h-20 px-12 md:px-20 rounded-2xl bg-white text-[#000401] hover:bg-white/90 text-xl font-bold uppercase tracking-wide group mb-12 transition-transform hover:scale-105" asChild>
-            <a href="#offer">Quero acessar agora</a>
+            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Quero acessar agora</a>
           </Button>
 
           <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12 text-[10px] md:text-xs font-bold text-muted-foreground tracking-[0.2em] uppercase opacity-60">
@@ -267,10 +270,10 @@ export default function LandingPage() {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
-            <Button size="lg" className="h-16 px-10 rounded-2xl bg-white text-black hover:bg-white/90 font-bold text-lg w-full sm:w-auto transition-transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
-              Garantir minha vaga agora
+            <Button size="lg" className="h-16 px-10 rounded-2xl bg-white text-black hover:bg-white/90 font-bold text-lg w-full sm:w-auto transition-transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.1)]" asChild>
+              <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Garantir minha vaga agora</a>
             </Button>
-            <a href="https://wa.link/7pjg5p" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
               <ShimmerButton 
                 className="h-16 px-10 rounded-2xl w-full sm:w-auto shadow-2xl"
                 background="rgba(255, 255, 255, 0.05)"
