@@ -74,23 +74,16 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-[#000401] selection:bg-white/30 selection:text-white">
-      {/* Header Centralizado */}
       <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none pt-6">
         <div className="pointer-events-auto">
           <NavBar items={navItems} />
         </div>
       </div>
 
-      {/* Hero Section */}
       <HeroSection />
-      
-      {/* Logos Section */}
       <LogosSection />
-
-      {/* SEÇÃO 2 – PÚBLICO ALVO */}
       <Features />
 
-      {/* SEÇÃO 3 – O QUE É O CURSO */}
       <SectionContainer className="text-center">
         <div className="max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-headline font-bold mb-6 text-white text-shadow-premium">O que você vai aprender</h2>
@@ -128,7 +121,6 @@ export default function LandingPage() {
         </div>
       </SectionContainer>
 
-      {/* SEÇÃO 4 – O QUE VOCÊ TERÁ AO FINAL */}
       <SectionContainer className="pb-0">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-5xl font-headline font-bold mb-4 text-white text-shadow-premium">O que você terá ao final do curso</h2>
@@ -136,11 +128,9 @@ export default function LandingPage() {
             Mais do que teoria. Você sai com conhecimento técnico aplicado e um projeto real estruturado do zero.
           </p>
         </div>
-
         <FeaturesSectionWithHoverEffects />
       </SectionContainer>
 
-      {/* SEÇÃO 5 – MÓDULOS */}
       <SectionContainer id="modules" className="pt-0">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="max-w-2xl">
@@ -190,7 +180,6 @@ export default function LandingPage() {
         </div>
       </SectionContainer>
 
-      {/* SEÇÃO 6 – OFERTA */}
       <SectionContainer id="offer" className="py-24">
         <div className="relative rounded-[3rem] overflow-hidden p-8 md:p-16 lg:p-24 text-center bg-card border border-white/5 shadow-[0_0_100px_rgba(255,255,255,0.02)] max-w-5xl mx-auto">
           <div className="glow-accent -top-40 -left-40 opacity-20 animate-pulse-glow" />
@@ -231,7 +220,6 @@ export default function LandingPage() {
         </div>
       </SectionContainer>
 
-      {/* SEÇÃO 7 – FAQ */}
       <SectionContainer id="faq" className="max-w-4xl">
         <h2 className="text-3xl md:text-5xl font-headline font-bold mb-12 text-center text-white text-shadow-premium">Dúvidas Frequentes</h2>
         <Accordion type="single" collapsible className="w-full space-y-4">
@@ -254,18 +242,17 @@ export default function LandingPage() {
         </Accordion>
       </SectionContainer>
 
-      {/* SEÇÃO 8 – CTA FINAL */}
       <SectionContainer className="py-24 border-t border-white/5 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center space-y-12 relative">
           <div className="glow-accent top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10" />
           
-          <h2 className="text-4xl md:text-6xl font-headline font-bold text-white text-shadow-premium tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-headline font-bold text-white text-shadow-premium tracking-tight">
             Ainda tem dúvidas?
           </h2>
           
           <div className="max-w-3xl mx-auto">
             <p className="text-lg text-white/90 font-headline leading-relaxed">
-              Aqui você não encontrará apenas explicações genéricas, mas um processo claro de construção, versionamento, deploy e organização de um projeto funcional.
+              Aqui você não encontrará apenas explicações genéricas, mas um processo claro de construção, <br className="hidden md:block" /> versionamento, deploy e organização de um projeto funcional.
             </p>
           </div>
 
@@ -294,7 +281,6 @@ export default function LandingPage() {
         </div>
       </SectionContainer>
 
-      {/* Footer */}
       <footer className="py-12 border-t border-white/5 bg-[#000401]">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-muted-foreground">
           <div className="font-headline font-bold text-white text-lg flex items-center gap-2">
@@ -307,7 +293,7 @@ export default function LandingPage() {
             <a href="#" className="hover:text-white transition-colors">Suporte</a>
           </div>
           <div className="text-white/40">
-            © 2024 SaaS Genesis. Todos os direitos reservados.
+            © 2025 Gustavo Sextaro. Todos os direitos reservados.
           </div>
         </div>
       </footer>
