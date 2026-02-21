@@ -198,7 +198,7 @@ export default function LandingPage() {
             </div>
             <div className="flex flex-col items-center justify-center">
               <div className="text-5xl md:text-7xl font-bold tracking-tighter text-white">
-                12x R$ <span className="text-white">12,70</span>
+                12x R$ <span className="text-white">12,91</span>
               </div>
               <p className="text-sm md:text-base text-muted-foreground mt-2 font-headline">ou R$ 127,00 à vista</p>
             </div>
